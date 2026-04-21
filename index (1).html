@@ -1,0 +1,1745 @@
+<html lang="pt-BR"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Calendário Editorial Zarpei 2026</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=DM+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy:#0d1b2a;--navy-mid:#1a3350;--blue:#1d5fa8;--blue-light:#3b82c4;
+    --cyan:#00c2d4;--white:#ffffff;--bg:#f0f4f9;--card:#ffffff;
+    --border:#dce6f0;--text:#0d1b2a;--muted:#6b84a0;
+    --arte:#0099b8;--foto:#1a5fa8;--story:#6d28d9;--reels:#be1f1f;--carrossel:#047857;
+    --pend-bg:#fffbeb;--pend-brd:#d97706;--pend-txt:#92400e;
+    --shadow:0 2px 16px rgba(13,27,42,0.09);
+    --zarpei-green:#00b050;
+  }
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);min-height:100vh;padding-bottom:80px;}
+
+  [contenteditable="true"]{outline:none;cursor:text;border-radius:4px;transition:background .15s;}
+  [contenteditable="true"]:hover{background:rgba(0,194,212,0.13);}
+  [contenteditable="true"]:focus{background:rgba(0,194,212,0.2);padding:0 4px;}
+  .edit-hint{font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:1px;text-transform:uppercase;margin-top:3px;pointer-events:none;}
+
+  /* HEADER */
+  .site-header{background:var(--navy);padding:28px 40px 22px;display:flex;align-items:flex-end;justify-content:space-between;gap:24px;flex-wrap:wrap;}
+  .header-brand h1{font-family:'Playfair Display',serif;font-size:42px;color:var(--white);line-height:1;letter-spacing:-.5px;}
+  .header-brand h1 em{font-style:normal;color:var(--cyan);}
+  .header-brand .sub{font-size:11px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--muted);margin-top:6px;display:block;}
+  .header-meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;}
+  .chip{display:inline-flex;align-items:center;gap:5px;padding:5px 12px;border-radius:999px;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;white-space:nowrap;}
+  .chip.arte{background:var(--arte);color:#fff;}.chip.foto{background:var(--foto);color:#fff;}
+  .chip.story{background:var(--story);color:#fff;}.chip.reels{background:var(--reels);color:#fff;}
+  .chip.carrossel{background:var(--carrossel);color:#fff;}
+  .chip.pendente{background:var(--pend-bg);color:var(--pend-txt);border:1.5px dashed var(--pend-brd);}
+
+  /* TOOLBAR */
+  .toolbar{background:var(--navy-mid);padding:10px 40px;display:flex;align-items:center;gap:10px;flex-wrap:wrap;position:sticky;top:0;z-index:100;}
+  .toolbar-label{font-size:10px;font-weight:700;color:var(--cyan);text-transform:uppercase;letter-spacing:2px;margin-right:4px;}
+  .btn{padding:7px 16px;border-radius:8px;font-family:'DM Sans',sans-serif;font-size:12px;font-weight:600;cursor:pointer;border:none;transition:all .15s;}
+  .btn-ghost{background:rgba(255,255,255,.08);color:#fff;border:1px solid rgba(255,255,255,.15);}
+  .btn-ghost:hover{background:rgba(255,255,255,.16);}
+  .btn-cyan{background:var(--cyan);color:var(--navy);}.btn-cyan:hover{filter:brightness(1.08);}
+  .btn-danger{background:var(--reels);color:#fff;}.btn-danger:hover{filter:brightness(1.08);}
+  .month-nav{display:flex;gap:6px;align-items:center;margin-left:auto;}
+  .month-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:7px;font-size:11px;font-weight:700;cursor:pointer;transition:all .15s;}
+  .month-btn:hover{background:rgba(255,255,255,.25);}
+  .month-btn.active{background:var(--cyan);color:var(--navy);border-color:var(--cyan);}
+
+  /* YEAR STATS */
+  .stats-bar{max-width:1400px;margin:28px auto 0;padding:0 24px;display:flex;gap:10px;flex-wrap:wrap;}
+  .stat-pill{background:var(--card);border-radius:12px;padding:12px 18px;box-shadow:var(--shadow);display:flex;flex-direction:column;align-items:center;gap:3px;min-width:80px;flex:1;}
+  .stat-pill .num{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;line-height:1;}
+  .stat-pill .lbl{font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);}
+
+  /* MONTH BLOCK */
+  .months-container{max-width:1400px;margin:0 auto;padding:0 24px;}
+  .month-block{margin-top:32px;scroll-margin-top:60px;}
+  .month-header{display:flex;align-items:center;gap:16px;margin-bottom:12px;}
+  .month-title{font-family:'Playfair Display',serif;font-size:28px;font-weight:700;color:var(--navy);}
+  .month-title em{font-style:normal;color:var(--cyan);}
+  .month-badge{background:var(--navy);color:var(--cyan);border-radius:8px;padding:4px 12px;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;}
+  .month-notes{background:#fff;border-left:4px solid var(--cyan);border-radius:0 10px 10px 0;padding:10px 16px;font-size:12px;color:var(--navy-mid);line-height:1.6;margin-bottom:12px;box-shadow:var(--shadow);min-height:36px;}
+  .month-notes:empty:before{content:attr(placeholder);color:var(--muted);pointer-events:none;}
+  .month-notes:focus{outline:none;background:#f5fdff;}
+  .month-notes strong{color:var(--navy);font-weight:700;}
+
+  /* PLANNING PANEL */
+  .plan-panel{background:var(--card);border-radius:16px;box-shadow:var(--shadow);margin-bottom:14px;overflow:hidden;}
+  .plan-grid{display:grid;grid-template-columns:repeat(3,1fr) repeat(2,1fr);gap:0;}
+  .plan-grid-bottom{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--border);}
+  .plan-cell{padding:14px 16px;border-right:1px solid var(--border);display:flex;flex-direction:column;gap:6px;}
+  .plan-cell:last-child{border-right:none;}
+  .plan-cell-full{padding:14px 16px;display:flex;flex-direction:column;gap:6px;border-right:1px solid var(--border);}
+  .plan-cell-full:last-child{border-right:none;}
+  .plan-label{font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:2px;color:var(--muted);display:flex;align-items:center;gap:5px;}
+  .plan-label span{font-size:13px;}
+  .plan-input{border:1.5px solid var(--border);border-radius:8px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:12px;color:var(--text);outline:none;transition:border-color .2s,background .2s;width:100%;background:#fafcff;resize:none;}
+  .plan-input:focus{border-color:var(--cyan);background:#fff;}
+  .plan-input.tall{min-height:58px;resize:vertical;}
+  .plan-header-row{background:var(--navy);padding:10px 16px;display:flex;align-items:center;gap:8px;}
+  .plan-header-row span{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--cyan);}
+  .plan-header-row .plan-icon{font-size:14px;}
+  @media(max-width:900px){.plan-grid{grid-template-columns:1fr 1fr;}.plan-grid-bottom{grid-template-columns:1fr;}}
+
+  /* CALENDAR */
+  .cal-grid-outer{background:var(--card);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:4px;}
+  .cal-dow{display:grid;grid-template-columns:repeat(7,1fr);background:var(--navy);}
+  .cal-dow-cell{padding:12px 8px;text-align:center;font-size:11px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--cyan);}
+  .cal-dow-cell.wknd{opacity:.5;}
+  .cal-weeks{display:flex;flex-direction:column;}
+  .cal-week{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--border);}
+  .cal-week:last-child{border-bottom:none;}
+  .cal-day{min-height:140px;border-right:1px solid var(--border);padding:8px 7px;display:flex;flex-direction:column;gap:5px;position:relative;transition:background .12s;}
+  .cal-day:last-child{border-right:none;}
+  .cal-day.empty{background:#f8fafd;pointer-events:none;}
+  .cal-day.wknd-col{background:#fafcff;}
+  .cal-day:not(.empty):hover{background:#f3f8ff;}
+  .day-num{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--navy);line-height:1;}
+  .cal-day.empty .day-num{color:#c8d5e5;}
+  .special-label{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:#b45309;background:#fef3c7;border-radius:4px;padding:2px 5px;display:inline-block;width:fit-content;line-height:1.4;}
+  .special-label.promo{color:#065f46;background:#d1fae5;}
+  .special-label.campaign{color:#4c1d95;background:#ede9fe;}
+
+  /* POST CARD */
+  .post-card{border-radius:8px;padding:6px 7px;flex:1;display:flex;flex-direction:column;gap:3px;position:relative;cursor:pointer;transition:filter .12s,transform .12s;overflow:hidden;}
+  .post-card:hover{filter:brightness(1.06);transform:translateY(-1px);}
+  .post-card.arte{background:var(--arte);}.post-card.foto{background:var(--foto);}
+  .post-card.story{background:var(--story);}.post-card.reels{background:var(--reels);}
+  .post-card.carrossel{background:var(--carrossel);}
+  .post-card.pendente{background:var(--pend-bg)!important;border:1.5px dashed var(--pend-brd);}
+  .post-card.postado{opacity:.55;filter:grayscale(.4);}
+  .postado-badge{display:inline-flex;align-items:center;gap:3px;background:rgba(255,255,255,.22);border-radius:4px;padding:2px 5px;font-size:8px;font-weight:800;letter-spacing:1px;color:#fff;text-transform:uppercase;width:fit-content;}
+  .post-card.pendente .postado-badge{background:rgba(0,0,0,.08);color:var(--pend-txt);}
+  .post-card.postado .postado-badge{background:rgba(16,185,129,.3);color:#fff;}
+  .video-link-badge{display:inline-flex;align-items:center;gap:3px;background:rgba(255,255,255,.2);border-radius:4px;padding:2px 6px;font-size:8px;font-weight:800;letter-spacing:.8px;color:#fff;text-decoration:none;text-transform:uppercase;width:fit-content;transition:background .12s;}
+  .video-link-badge:hover{background:rgba(255,255,255,.35);}
+  .tp-icon{position:absolute;bottom:5px;right:6px;font-size:12px;line-height:1;opacity:.9;pointer-events:none;}
+  .post-type-tag{font-size:8px;font-weight:800;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,255,255,.75);}
+  .post-card.pendente .post-type-tag{color:var(--pend-brd);}
+  .post-title{font-size:10px;font-weight:600;color:#fff;line-height:1.3;outline:none;min-height:12px;word-break:break-word;}
+  .post-card.pendente .post-title{color:var(--pend-txt);}
+  .post-title:focus{background:rgba(255,255,255,.15);border-radius:3px;padding:1px 3px;}
+  .post-meta{font-size:8px;color:rgba(255,255,255,.6);font-weight:500;}
+  .post-card.pendente .post-meta{color:var(--pend-brd);}
+  .card-gallery{display:flex;flex-wrap:wrap;gap:2px;margin-top:2px;}
+  .card-thumb{position:relative;width:30px;height:30px;border-radius:4px;overflow:hidden;flex-shrink:0;background:rgba(0,0,0,.2);}
+  .card-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .card-thumb .rm-thumb{display:none;position:absolute;inset:0;background:rgba(190,31,31,.8);color:#fff;font-size:11px;align-items:center;justify-content:center;cursor:pointer;border:none;}
+  .card-thumb:hover .rm-thumb{display:flex;}
+  .add-thumb-btn{width:30px;height:30px;border-radius:4px;border:1.5px dashed rgba(255,255,255,.4);background:transparent;color:rgba(255,255,255,.6);font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all .12s;flex-shrink:0;}
+  .add-thumb-btn:hover{background:rgba(255,255,255,.15);border-color:rgba(255,255,255,.9);color:#fff;}
+  .card-actions{display:none;position:absolute;top:4px;right:4px;gap:2px;}
+  .post-card:hover .card-actions{display:flex;}
+  .card-btn{width:18px;height:18px;border-radius:3px;border:none;cursor:pointer;font-size:9px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.25);color:#fff;transition:background .1s;}
+  .card-btn:hover{background:rgba(255,255,255,.45);}
+  .add-post-btn{border:1.5px dashed #c5d5e8;border-radius:8px;padding:5px;text-align:center;font-size:9px;color:#9ab0c8;cursor:pointer;transition:all .15s;font-weight:600;background:transparent;width:100%;}
+  .add-post-btn:hover{border-color:var(--blue-light);color:var(--blue-light);background:#eef4ff;}
+
+  /* LIGHTBOX */
+  .lightbox{display:none;position:fixed;inset:0;background:rgba(5,10,20,.92);backdrop-filter:blur(8px);z-index:2000;align-items:center;justify-content:center;padding:20px;flex-direction:column;gap:16px;}
+  .lightbox.open{display:flex;}
+  .lightbox-img-wrap{position:relative;max-width:90vw;max-height:78vh;display:flex;align-items:center;justify-content:center;}
+  .lightbox-img-wrap img{max-width:90vw;max-height:78vh;border-radius:12px;box-shadow:0 32px 80px rgba(0,0,0,.6);object-fit:contain;display:block;}
+  .lightbox-close{position:absolute;top:-14px;right:-14px;width:34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;border:2px solid rgba(255,255,255,.2);font-size:16px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .lightbox-close:hover{background:var(--reels);}
+  .lightbox-nav{display:flex;align-items:center;gap:16px;}
+  .lightbox-nav-btn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;width:40px;height:40px;border-radius:50%;font-size:18px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .lightbox-nav-btn:disabled{opacity:.25;cursor:default;}
+  .lightbox-counter{color:rgba(255,255,255,.6);font-size:12px;font-weight:600;letter-spacing:1px;min-width:60px;text-align:center;}
+  .lightbox-info .lb-title{font-family:'Playfair Display',serif;font-size:18px;color:#fff;margin-bottom:4px;text-align:center;}
+  .lightbox-info .lb-date{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:1.5px;text-transform:uppercase;text-align:center;}
+  body.view-mode .card-thumb{cursor:zoom-in;}
+  body.view-mode .card-thumb .rm-thumb{display:none!important;}
+  body.view-mode .add-thumb-btn{display:none!important;}
+
+  /* MODAL */
+  .modal-overlay{display:none;position:fixed;inset:0;background:rgba(13,27,42,.55);backdrop-filter:blur(4px);z-index:1000;align-items:center;justify-content:center;padding:20px;}
+  .modal-overlay.open{display:flex;}
+  .modal{background:#fff;border-radius:20px;width:100%;max-width:580px;box-shadow:0 24px 64px rgba(13,27,42,.22);overflow:hidden;animation:modalIn .18s ease;max-height:92vh;display:flex;flex-direction:column;}
+  @keyframes modalIn{from{transform:translateY(14px) scale(.97);opacity:0;}to{transform:none;opacity:1;}}
+  .modal-header{background:var(--navy);padding:18px 24px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0;}
+  .modal-header h3{font-family:'Playfair Display',serif;font-size:19px;color:#fff;}
+  .modal-header h3 span{color:var(--cyan);}
+  .modal-close{width:30px;height:30px;border-radius:7px;border:none;background:rgba(255,255,255,.1);color:#fff;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+  .modal-close:hover{background:rgba(255,255,255,.2);}
+  .modal-body{padding:20px 24px;display:flex;flex-direction:column;gap:14px;overflow-y:auto;}
+  .form-group{display:flex;flex-direction:column;gap:5px;}
+  .form-group label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);}
+  .form-group input,.form-group textarea,.form-group select{border:1.5px solid var(--border);border-radius:10px;padding:9px 13px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text);outline:none;transition:border-color .15s;width:100%;}
+  .form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--blue);}
+  .form-group textarea{resize:vertical;min-height:72px;}
+  .type-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;}
+  .type-opt{padding:7px 4px;border-radius:8px;border:2px solid var(--border);text-align:center;font-size:10px;font-weight:700;cursor:pointer;transition:all .12s;color:var(--muted);}
+  .type-opt:hover{border-color:var(--blue-light);color:var(--blue);}
+  .type-opt.selected{color:#fff;border-color:transparent;}
+  .type-opt[data-type="arte"].selected{background:var(--arte);}
+  .type-opt[data-type="foto"].selected{background:var(--foto);}
+  .type-opt[data-type="story"].selected{background:var(--story);}
+  .type-opt[data-type="reels"].selected{background:var(--reels);}
+  .type-opt[data-type="carrossel"].selected{background:var(--carrossel);}
+  .mgal-label{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);}
+  .mgal-hint{font-size:10px;font-weight:400;text-transform:none;letter-spacing:0;color:#aab;}
+  .modal-gallery{display:flex;flex-wrap:wrap;gap:8px;padding:10px;border:1.5px dashed var(--border);border-radius:12px;min-height:60px;align-items:flex-start;transition:border-color .15s,background .15s;}
+  .modal-gallery.drag-over{border-color:var(--cyan);background:#e8fafb;}
+  .mgal-thumb{position:relative;width:72px;height:72px;border-radius:8px;overflow:hidden;background:#eee;}
+  .mgal-thumb img{width:100%;height:100%;object-fit:cover;display:block;}
+  .mgal-thumb .rm-btn{position:absolute;top:2px;right:2px;width:18px;height:18px;border-radius:4px;background:rgba(190,31,31,.85);color:#fff;border:none;font-size:11px;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .15s;}
+  .mgal-thumb:hover .rm-btn{opacity:1;}
+  .mgal-add{width:72px;height:72px;border-radius:8px;border:2px dashed #c5d5e8;background:transparent;color:#9ab0c8;font-size:24px;cursor:pointer;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:all .15s;}
+  .mgal-add span.lbl{font-size:9px;font-weight:700;}
+  .mgal-add:hover{border-color:var(--blue-light);color:var(--blue);background:#eef4ff;}
+  .pending-toggle{display:flex;align-items:center;gap:10px;padding:10px 13px;border-radius:10px;background:var(--pend-bg);border:1.5px dashed var(--pend-brd);cursor:pointer;font-size:13px;font-weight:600;color:var(--pend-txt);user-select:none;}
+  .pending-toggle input{accent-color:var(--pend-brd);width:15px;height:15px;}
+  .modal-footer{padding:14px 24px;border-top:1px solid var(--border);display:flex;gap:8px;justify-content:flex-end;flex-shrink:0;}
+
+  /* DATAS MODAL */
+  .datas-list{display:flex;flex-direction:column;gap:8px;max-height:340px;overflow-y:auto;}
+  .data-row{display:grid;grid-template-columns:60px 1fr 36px;gap:8px;align-items:center;}
+  .data-row .day-input{border:1.5px solid var(--border);border-radius:8px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:13px;text-align:center;outline:none;width:100%;}
+  .data-row .label-input{border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;width:100%;}
+  .data-row .rm-data-btn{width:34px;height:34px;border-radius:8px;border:none;background:#fee2e2;color:#be1f1f;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+  .add-data-btn{border:1.5px dashed var(--border);border-radius:8px;padding:8px;text-align:center;font-size:12px;color:var(--muted);cursor:pointer;font-weight:600;background:transparent;width:100%;transition:all .15s;margin-top:4px;}
+  .add-data-btn:hover{border-color:var(--blue);color:var(--blue);background:#eef4ff;}
+  .data-col-labels{display:grid;grid-template-columns:60px 1fr 36px;gap:8px;padding:0 0 4px;}
+  .data-col-labels span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);}
+  /* DATAS MODAL */
+  .datas-list{display:flex;flex-direction:column;gap:8px;max-height:340px;overflow-y:auto;}
+  .data-row{display:grid;grid-template-columns:60px 1fr 36px;gap:8px;align-items:center;}
+  .add-data-btn{border:1.5px dashed var(--border);border-radius:8px;padding:8px;text-align:center;font-size:12px;color:var(--muted);cursor:pointer;font-weight:600;background:transparent;width:100%;transition:all .15s;margin-top:4px;}
+  .add-data-btn:hover{border-color:var(--blue);color:var(--blue);background:#eef4ff;}
+  .data-col-labels{display:grid;grid-template-columns:60px 1fr 36px;gap:8px;padding:0 0 4px;}
+  .data-col-labels span{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--muted);}
+  .toast{position:fixed;bottom:24px;right:24px;background:var(--navy);color:#fff;padding:11px 18px;border-radius:10px;font-size:13px;font-weight:600;box-shadow:0 8px 24px rgba(0,0,0,.18);transform:translateY(80px);opacity:0;transition:all .3s;z-index:9999;}
+  .toast.show{transform:none;opacity:1;}
+
+  @media print{.toolbar,.add-post-btn,.card-actions,.add-thumb-btn{display:none!important;}body{background:#fff;}.post-card{-webkit-print-color-adjust:exact;print-color-adjust:exact;}}
+</style>
+<meta id="bbafmabaelnnkondpfpjmdklbmfnbmol"><meta id="bbafmabaelnnkondpfpjmdklbmfnbmol"></head>
+<body>
+<header class="site-header">
+<div class="header-brand">
+<h1><span contenteditable="true" id="hdrClient" style="outline:none;">Zarpei Mobilidade Elétrica</span> · <em contenteditable="true" id="hdrYear" style="outline:none;">2026</em></h1>
+<span class="sub" contenteditable="true" id="hdrSub" style="outline:none;">CALENDÁRIO EDITORIAL — @ZARPEI.MOBI</span>
+<div class="edit-hint">✏ clique em qualquer texto para editar</div>
+</div>
+<div class="header-meta">
+<span class="chip arte">🎨 Arte</span>
+<span class="chip foto">📸 Foto</span>
+<span class="chip story">📱 Story</span>
+<span class="chip reels">🎬 Reels</span>
+<span class="chip carrossel">🖼 Carrossel</span>
+<span class="chip pendente">⏳ Pendente</span>
+<span class="chip" style="background:linear-gradient(90deg,#ea580c,#f97316);color:#fff;">💸 Tráfego Pago</span>
+</div>
+</header>
+<div class="toolbar">
+<span class="toolbar-label">Ações:</span>
+<button class="btn btn-ghost" onclick="configurarToken()">🔐 Token</button>
+<button class="btn btn-cyan" onclick="window.print()">🖨 Imprimir</button>
+<button class="btn btn-ghost" onclick="salvarAlteracoes()">💾 Salvar alterações</button>
+<button class="btn btn-ghost" id="editModeBtn" onclick="toggleEditMode()">✏️ Modo Edição</button>
+<button class="btn btn-ghost" onclick="openDatasModal()">🗓 Datas Comemorativas</button>
+<div class="month-nav" id="monthNav"><button class="month-btn active" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button><button class="month-btn" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button><button class="month-btn" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button></div>
+<button class="btn btn-danger" onclick="resetarAlteracoes()">↩️ Desfazer</button></div>
+<div class="stats-bar">
+<div class="stat-pill"><div class="num" id="statTotal" style="color:var(--navy)">12</div><div class="lbl">Total Posts</div></div>
+<div class="stat-pill"><div class="num" id="statArte" style="color:var(--arte)">3</div><div class="lbl">Artes</div></div>
+<div class="stat-pill"><div class="num" id="statFoto" style="color:var(--foto)">4</div><div class="lbl">Fotos</div></div>
+<div class="stat-pill"><div class="num" id="statStory" style="color:var(--story)">0</div><div class="lbl">Stories</div></div>
+<div class="stat-pill"><div class="num" id="statReels" style="color:var(--reels)">2</div><div class="lbl">Reels</div></div>
+<div class="stat-pill"><div class="num" id="statCarrossel" style="color:var(--carrossel)">3</div><div class="lbl">Carrosseis</div></div>
+<div class="stat-pill"><div class="num" id="statPend" style="color:var(--pend-brd)">0</div><div class="lbl">Pendentes</div></div>
+<div class="stat-pill"><div class="num" id="statPostado" style="color:#059669">0</div><div class="lbl">Postados</div></div>
+</div>
+<div class="months-container" id="monthsContainer"><div class="month-block" id="month-0"><div class="month-header"><div class="month-title">Janeiro <em>2026</em></div><div class="month-badge">Mês 1</div></div><div class="month-notes" contenteditable="true" data-month="1" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(1,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(1,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(1,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(1,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(1,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(1,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><div class="special-label">🎆 Ano Novo</div><button class="add-post-btn" onclick="openModal(0,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(0,2,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(0,3,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="4"><div class="day-num">4</div>
+            <div class="post-card arte" onclick="openModal(0,4)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(0,4)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(0,4)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(0,4)">🗑</button>
+              </div>
+              <div class="post-type-tag">🎨 Arte</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(0,4,this.innerText)">teste</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(0,4)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(0,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><div class="special-label">🏖️ Feriado RJ</div><button class="add-post-btn" onclick="openModal(0,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(0,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(0,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(0,9,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(0,10,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(0,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(0,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(0,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(0,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(0,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(0,16,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(0,17,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(0,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(0,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(0,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(0,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(0,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(0,23,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(0,24,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(0,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(0,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(0,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(0,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(0,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(0,30,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="31"><div class="day-num">31</div><button class="add-post-btn" onclick="openModal(0,31,true)">＋ post</button></div></div></div></div></div><div class="month-block" id="month-1"><div class="month-header"><div class="month-title">Fevereiro <em>2026</em></div><div class="month-badge">Mês 2</div></div><div class="month-notes" contenteditable="true" data-month="2" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(2,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(2,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(2,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(2,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(2,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(2,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day wknd-col" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(1,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(1,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(1,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(1,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(1,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(1,6,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(1,7,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(1,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(1,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(1,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(1,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(1,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(1,13,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(1,14,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(1,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><div class="special-label">🎭 Carnaval</div><button class="add-post-btn" onclick="openModal(1,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><div class="special-label">🎭 Carnaval</div><button class="add-post-btn" onclick="openModal(1,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><div class="special-label">🎭 Quarta-feira de Cinzas</div><button class="add-post-btn" onclick="openModal(1,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(1,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(1,20,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(1,21,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(1,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(1,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(1,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(1,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(1,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(1,27,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(1,28,true)">＋ post</button></div></div></div></div></div><div class="month-block" id="month-2"><div class="month-header"><div class="month-title">Março <em>2026</em></div><div class="month-badge">Mês 3</div></div><div class="month-notes" contenteditable="true" data-month="3" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(3,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(3,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(3,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(3,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(3,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(3,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day wknd-col" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(2,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(2,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(2,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(2,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(2,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(2,6,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(2,7,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="8"><div class="day-num">8</div><div class="special-label">👩 Dia da Mulher</div><button class="add-post-btn" onclick="openModal(2,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(2,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(2,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(2,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(2,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(2,13,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(2,14,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(2,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(2,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(2,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(2,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(2,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><div class="special-label">🌿 Início do Outono</div><button class="add-post-btn" onclick="openModal(2,20,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(2,21,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(2,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(2,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(2,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(2,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(2,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(2,27,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(2,28,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(2,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(2,30,true)">＋ post</button></div><div class="cal-day" data-day="31"><div class="day-num">31</div><button class="add-post-btn" onclick="openModal(2,31,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-3"><div class="month-header"><div class="month-title">Abril <em>2026</em></div><div class="month-badge">Mês 4</div></div><div class="month-notes" contenteditable="true" data-month="4" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…">Zarpei Mobilidade Elétrica — 11 posts planejados</div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(4,'objetivos',this.value)">Aniversário da Zarpei.</textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(4,'investimento',this.value)">nenhum.</textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(4,'trafego',this.value)">nenhum.</textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(4,'influenciadores',this.value)">Tawan, Murilo, Achadinhos, Enzo.</textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(4,'persona',this.value)">Público de Angra e Volta Redonda que já tenha interesse.</textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(4,'observacoes',this.value)">Ações de marketing junto aos influencers para o mês todo falando sobre a ação de brindes.</textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><div class="special-label">🤥 Dia da Mentira</div>
+            <div class="post-card arte" onclick="openModal(3,1)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,1)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,1)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,1)">🗑</button>
+              </div>
+              <div class="post-type-tag">🎨 Arte</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,1,this.innerText)">Se estiver vendo isso embaçado…</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,1)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="2"><div class="day-num">2</div><div class="special-label">🧩 Consciência do Autismo</div><button class="add-post-btn" onclick="openModal(3,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><div class="special-label">✝️ Sexta-Feira Santa</div>
+            <div class="post-card foto" onclick="openModal(3,3)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,3)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,3)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,3)">🗑</button>
+              </div>
+              <div class="post-type-tag">📸 Foto</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,3,this.innerText)">Presença que chama atenção</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,3)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day wknd-col" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(3,4,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="5"><div class="day-num">5</div><div class="special-label">🐣 Páscoa</div><button class="add-post-btn" onclick="openModal(3,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><div class="special-label">🙏 São Benedito</div><button class="add-post-btn" onclick="openModal(3,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><div class="special-label">🌍 Dia Mundial da Saúde</div>
+            <div class="post-card carrossel" onclick="openModal(3,7)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,7)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,7)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,7)">🗑</button>
+              </div>
+              <div class="post-type-tag">🖼 Carrossel</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,7,this.innerText)">Zarpei se fosse uma música</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,7)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="8"><div class="day-num">8</div><div class="special-label">🎗️ Combate ao Câncer</div><button class="add-post-btn" onclick="openModal(3,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div>
+            <div class="post-card reels" onclick="openModal(3,9)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,9)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,9)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,9)">🗑</button>
+              </div>
+              <div class="post-type-tag">🎬 Reels</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,9,this.innerText)">Só queria uma linda dessa</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,9)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(3,10,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(3,11,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(3,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><div class="special-label">💋 Dia do Beijo</div>
+            <div class="post-card carrossel" onclick="openModal(3,13)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,13)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,13)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,13)">🗑</button>
+              </div>
+              <div class="post-type-tag">🖼 Carrossel</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,13,this.innerText)">Como preservar a vida útil da sua Zarpei</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,13)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="14"><div class="day-num">14</div><div class="special-label">☕ Dia Mundial do Café</div><button class="add-post-btn" onclick="openModal(3,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div>
+            <div class="post-card foto" onclick="openModal(3,15)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,15)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,15)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,15)">🗑</button>
+              </div>
+              <div class="post-type-tag">📸 Foto</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,15,this.innerText)">Mobilidade elétrica em movimento</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,15)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(3,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div>
+            <div class="post-card carrossel" onclick="openModal(3,17)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,17)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,17)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,17)">🗑</button>
+              </div>
+              <div class="post-type-tag">🖼 Carrossel</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,17,this.innerText)">Disseram que um hábito leva 21 dias…</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,17)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(3,18,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(3,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(3,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><div class="special-label">🇧🇷 Tiradentes</div>
+            <div class="post-card arte" onclick="openModal(3,21)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,21)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,21)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,21)">🗑</button>
+              </div>
+              <div class="post-type-tag">🎨 Arte</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,21,this.innerText)">Sua empresa pronta pra mobilidade elétrica?</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,21)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="22"><div class="day-num">22</div><div class="special-label">🌍 Dia da Terra</div><button class="add-post-btn" onclick="openModal(3,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><div class="special-label">⚔️ São Jorge</div>
+            <div class="post-card foto" onclick="openModal(3,23)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,23)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,23)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,23)">🗑</button>
+              </div>
+              <div class="post-type-tag">📸 Foto</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,23,this.innerText)">Liberdade em duas rodas</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,23)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="24"><div class="day-num">24</div><div class="special-label">🥩 Dia Int. do Churrasco</div><button class="add-post-btn" onclick="openModal(3,24,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(3,25,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(3,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div>
+            <div class="post-card foto" onclick="openModal(3,27)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,27)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,27)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,27)">🗑</button>
+              </div>
+              <div class="post-type-tag">📸 Foto</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,27,this.innerText)">Mobilidade elétrica também é responsabilidade</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,27)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="28"><div class="day-num">28</div><div class="special-label">👵 Dia da Sogra</div><button class="add-post-btn" onclick="openModal(3,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div>
+            <div class="post-card reels" onclick="openModal(3,29)">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(3,29)" title="Toggle postado">✅</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(3,29)">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(3,29)">🗑</button>
+              </div>
+              <div class="post-type-tag">🎬 Reels</div>
+              
+              <div class="post-title" contenteditable="true" spellcheck="false" onclick="event.stopPropagation()" onblur="updateTitle(3,29,this.innerText)">Dicas do guarda de trânsito / Maio Amarelo</div>
+              
+              <div class="card-gallery"><button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(3,29)" title="Adicionar foto">＋</button></div>
+            </div></div><div class="cal-day" data-day="30"><div class="day-num">30</div><div class="special-label">🎷 Dia Int. do Jazz</div><button class="add-post-btn" onclick="openModal(3,30,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-4"><div class="month-header"><div class="month-title">Maio <em>2026</em></div><div class="month-badge">Mês 5</div></div><div class="month-notes" contenteditable="true" data-month="5" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(5,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(5,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(5,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(5,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(5,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(5,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(4,1,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(4,2,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(4,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(4,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(4,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(4,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(4,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(4,8,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(4,9,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="10"><div class="day-num">10</div><div class="special-label">💐 Dia das Mães</div><button class="add-post-btn" onclick="openModal(4,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(4,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(4,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(4,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(4,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(4,15,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(4,16,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(4,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(4,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(4,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(4,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(4,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(4,22,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(4,23,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(4,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(4,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(4,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(4,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(4,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(4,29,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(4,30,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="31"><div class="day-num">31</div><div class="special-label">🟡 Fim Maio Amarelo</div><button class="add-post-btn" onclick="openModal(4,31,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-5"><div class="month-header"><div class="month-title">Junho <em>2026</em></div><div class="month-badge">Mês 6</div></div><div class="month-notes" contenteditable="true" data-month="6" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(6,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(6,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(6,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(6,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(6,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(6,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(5,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(5,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(5,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(5,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><div class="special-label">🌍 Meio Ambiente</div><button class="add-post-btn" onclick="openModal(5,5,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(5,6,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(5,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(5,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(5,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(5,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(5,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><div class="special-label">💑 Dia dos Namorados</div><button class="add-post-btn" onclick="openModal(5,12,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(5,13,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(5,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(5,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(5,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(5,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(5,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(5,19,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(5,20,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(5,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(5,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(5,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(5,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(5,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(5,26,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(5,27,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(5,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(5,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(5,30,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-6"><div class="month-header"><div class="month-title">Julho <em>2026</em></div><div class="month-badge">Mês 7</div></div><div class="month-notes" contenteditable="true" data-month="7" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(7,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(7,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(7,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(7,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(7,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(7,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(6,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(6,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(6,3,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(6,4,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(6,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(6,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(6,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(6,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(6,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(6,10,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(6,11,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(6,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(6,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(6,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(6,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(6,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(6,17,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(6,18,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(6,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(6,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(6,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(6,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(6,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(6,24,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(6,25,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(6,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(6,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(6,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(6,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(6,30,true)">＋ post</button></div><div class="cal-day" data-day="31"><div class="day-num">31</div><button class="add-post-btn" onclick="openModal(6,31,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-7"><div class="month-header"><div class="month-title">Agosto <em>2026</em></div><div class="month-badge">Mês 8</div></div><div class="month-notes" contenteditable="true" data-month="8" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(8,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(8,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(8,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(8,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(8,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(8,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day wknd-col" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(7,1,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(7,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(7,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(7,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(7,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(7,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(7,7,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(7,8,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="9"><div class="day-num">9</div><div class="special-label">👨 Dia dos Pais</div><button class="add-post-btn" onclick="openModal(7,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(7,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(7,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(7,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(7,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(7,14,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(7,15,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(7,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(7,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(7,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(7,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(7,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(7,21,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(7,22,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(7,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(7,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(7,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(7,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(7,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(7,28,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(7,29,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(7,30,true)">＋ post</button></div><div class="cal-day" data-day="31"><div class="day-num">31</div><button class="add-post-btn" onclick="openModal(7,31,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-8"><div class="month-header"><div class="month-title">Setembro <em>2026</em></div><div class="month-badge">Mês 9</div></div><div class="month-notes" contenteditable="true" data-month="9" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(9,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(9,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(9,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(9,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(9,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(9,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(8,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(8,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(8,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(8,4,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(8,5,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(8,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><div class="special-label">🇧🇷 Independência</div><button class="add-post-btn" onclick="openModal(8,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(8,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(8,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(8,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(8,11,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(8,12,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(8,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(8,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><div class="special-label">🛍️ Dia do Cliente</div><button class="add-post-btn" onclick="openModal(8,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(8,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(8,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(8,18,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(8,19,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(8,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(8,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><div class="special-label">🌸 Primavera</div><button class="add-post-btn" onclick="openModal(8,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(8,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(8,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(8,25,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(8,26,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(8,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(8,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(8,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(8,30,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-9"><div class="month-header"><div class="month-title">Outubro <em>2026</em></div><div class="month-badge">Mês 10</div></div><div class="month-notes" contenteditable="true" data-month="10" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(10,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(10,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(10,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(10,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(10,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(10,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(9,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><div class="special-label">👶 Dia das Crianças</div><button class="add-post-btn" onclick="openModal(9,2,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(9,3,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(9,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(9,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(9,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(9,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(9,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(9,9,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(9,10,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(9,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><div class="special-label">🇧🇷 N.Sra. Aparecida</div><button class="add-post-btn" onclick="openModal(9,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(9,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(9,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(9,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(9,16,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(9,17,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(9,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(9,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(9,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(9,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(9,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(9,23,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(9,24,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(9,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(9,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(9,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(9,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(9,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(9,30,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="31"><div class="day-num">31</div><div class="special-label">🎃 Halloween</div><button class="add-post-btn" onclick="openModal(9,31,true)">＋ post</button></div></div></div></div></div><div class="month-block" id="month-10"><div class="month-header"><div class="month-title">Novembro <em>2026</em></div><div class="month-badge">Mês 11</div></div><div class="month-notes" contenteditable="true" data-month="11" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(11,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(11,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(11,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(11,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(11,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(11,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day wknd-col" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(10,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><div class="special-label">✝️ Finados</div><button class="add-post-btn" onclick="openModal(10,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(10,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(10,4,true)">＋ post</button></div><div class="cal-day" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(10,5,true)">＋ post</button></div><div class="cal-day" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(10,6,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(10,7,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="8"><div class="day-num">8</div><button class="add-post-btn" onclick="openModal(10,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(10,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(10,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(10,11,true)">＋ post</button></div><div class="cal-day" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(10,12,true)">＋ post</button></div><div class="cal-day" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(10,13,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(10,14,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="15"><div class="day-num">15</div><div class="special-label">🇧🇷 Proclamação Rep.</div><button class="add-post-btn" onclick="openModal(10,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(10,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(10,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(10,18,true)">＋ post</button></div><div class="cal-day" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(10,19,true)">＋ post</button></div><div class="cal-day" data-day="20"><div class="day-num">20</div><div class="special-label">⚫ Black Friday</div><button class="add-post-btn" onclick="openModal(10,20,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(10,21,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(10,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(10,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(10,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><button class="add-post-btn" onclick="openModal(10,25,true)">＋ post</button></div><div class="cal-day" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(10,26,true)">＋ post</button></div><div class="cal-day" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(10,27,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(10,28,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(10,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(10,30,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div><div class="month-block" id="month-11"><div class="month-header"><div class="month-title">Dezembro <em>2026</em></div><div class="month-badge">Mês 12</div></div><div class="month-notes" contenteditable="true" data-month="12" placeholder="Descreva a campanha do mês, promoções, objetivos, datas importantes…"></div><div class="plan-panel">
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(12,'objetivos',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(12,'investimento',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(12,'trafego',this.value)"></textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(12,'influenciadores',this.value)"></textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(12,'persona',this.value)"></textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(12,'observacoes',this.value)"></textarea>
+      </div>
+    </div>
+  </div><div class="cal-grid-outer"><div class="cal-dow"><div class="cal-dow-cell wknd">Dom</div><div class="cal-dow-cell">Seg</div><div class="cal-dow-cell">Ter</div><div class="cal-dow-cell">Qua</div><div class="cal-dow-cell">Qui</div><div class="cal-dow-cell">Sex</div><div class="cal-dow-cell wknd">Sáb</div></div><div class="cal-weeks"><div class="cal-week"><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day" data-day="1"><div class="day-num">1</div><button class="add-post-btn" onclick="openModal(11,1,true)">＋ post</button></div><div class="cal-day" data-day="2"><div class="day-num">2</div><button class="add-post-btn" onclick="openModal(11,2,true)">＋ post</button></div><div class="cal-day" data-day="3"><div class="day-num">3</div><button class="add-post-btn" onclick="openModal(11,3,true)">＋ post</button></div><div class="cal-day" data-day="4"><div class="day-num">4</div><button class="add-post-btn" onclick="openModal(11,4,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="5"><div class="day-num">5</div><button class="add-post-btn" onclick="openModal(11,5,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="6"><div class="day-num">6</div><button class="add-post-btn" onclick="openModal(11,6,true)">＋ post</button></div><div class="cal-day" data-day="7"><div class="day-num">7</div><button class="add-post-btn" onclick="openModal(11,7,true)">＋ post</button></div><div class="cal-day" data-day="8"><div class="day-num">8</div><div class="special-label">🎄 Imaculada Conceição</div><button class="add-post-btn" onclick="openModal(11,8,true)">＋ post</button></div><div class="cal-day" data-day="9"><div class="day-num">9</div><button class="add-post-btn" onclick="openModal(11,9,true)">＋ post</button></div><div class="cal-day" data-day="10"><div class="day-num">10</div><button class="add-post-btn" onclick="openModal(11,10,true)">＋ post</button></div><div class="cal-day" data-day="11"><div class="day-num">11</div><button class="add-post-btn" onclick="openModal(11,11,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="12"><div class="day-num">12</div><button class="add-post-btn" onclick="openModal(11,12,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="13"><div class="day-num">13</div><button class="add-post-btn" onclick="openModal(11,13,true)">＋ post</button></div><div class="cal-day" data-day="14"><div class="day-num">14</div><button class="add-post-btn" onclick="openModal(11,14,true)">＋ post</button></div><div class="cal-day" data-day="15"><div class="day-num">15</div><button class="add-post-btn" onclick="openModal(11,15,true)">＋ post</button></div><div class="cal-day" data-day="16"><div class="day-num">16</div><button class="add-post-btn" onclick="openModal(11,16,true)">＋ post</button></div><div class="cal-day" data-day="17"><div class="day-num">17</div><button class="add-post-btn" onclick="openModal(11,17,true)">＋ post</button></div><div class="cal-day" data-day="18"><div class="day-num">18</div><button class="add-post-btn" onclick="openModal(11,18,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="19"><div class="day-num">19</div><button class="add-post-btn" onclick="openModal(11,19,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="20"><div class="day-num">20</div><button class="add-post-btn" onclick="openModal(11,20,true)">＋ post</button></div><div class="cal-day" data-day="21"><div class="day-num">21</div><button class="add-post-btn" onclick="openModal(11,21,true)">＋ post</button></div><div class="cal-day" data-day="22"><div class="day-num">22</div><button class="add-post-btn" onclick="openModal(11,22,true)">＋ post</button></div><div class="cal-day" data-day="23"><div class="day-num">23</div><button class="add-post-btn" onclick="openModal(11,23,true)">＋ post</button></div><div class="cal-day" data-day="24"><div class="day-num">24</div><button class="add-post-btn" onclick="openModal(11,24,true)">＋ post</button></div><div class="cal-day" data-day="25"><div class="day-num">25</div><div class="special-label">🎄 Natal</div><button class="add-post-btn" onclick="openModal(11,25,true)">＋ post</button></div><div class="cal-day wknd-col" data-day="26"><div class="day-num">26</div><button class="add-post-btn" onclick="openModal(11,26,true)">＋ post</button></div></div><div class="cal-week"><div class="cal-day wknd-col" data-day="27"><div class="day-num">27</div><button class="add-post-btn" onclick="openModal(11,27,true)">＋ post</button></div><div class="cal-day" data-day="28"><div class="day-num">28</div><button class="add-post-btn" onclick="openModal(11,28,true)">＋ post</button></div><div class="cal-day" data-day="29"><div class="day-num">29</div><button class="add-post-btn" onclick="openModal(11,29,true)">＋ post</button></div><div class="cal-day" data-day="30"><div class="day-num">30</div><button class="add-post-btn" onclick="openModal(11,30,true)">＋ post</button></div><div class="cal-day" data-day="31"><div class="day-num">31</div><div class="special-label">🥂 Réveillon</div><button class="add-post-btn" onclick="openModal(11,31,true)">＋ post</button></div><div class="cal-day empty"><div class="day-num"></div></div><div class="cal-day empty"><div class="day-num"></div></div></div></div></div></div></div>
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay">
+<div class="modal">
+<div class="modal-header">
+<h3>Editar Post · <span id="modalDateLabel">4/1/2026</span></h3>
+<button class="modal-close" onclick="closeModal()">✕</button>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label>Tipo de Conteúdo</label>
+<div class="type-grid">
+<div class="type-opt selected" data-type="arte" onclick="selectType('arte')">🎨 Arte</div>
+<div class="type-opt" data-type="foto" onclick="selectType('foto')">📸 Foto</div>
+<div class="type-opt" data-type="story" onclick="selectType('story')">📱 Story</div>
+<div class="type-opt" data-type="reels" onclick="selectType('reels')">🎬 Reels</div>
+<div class="type-opt" data-type="carrossel" onclick="selectType('carrossel')">🖼 Carrossel</div>
+</div>
+</div>
+<div class="form-group">
+<label>Título / Frase da Postagem</label>
+<input id="modalPostTitle" placeholder="Ex: Nem todo dia precisa ser correria" type="text">
+</div>
+<div class="form-group" id="fieldImgObs" style="">
+<label>Observações de Imagem / Vídeo</label>
+<textarea id="modalImgObs" placeholder="Descreva a imagem ideal, enquadramento, luz, referências…" style="min-height:120px"></textarea>
+</div>
+<div class="form-group" id="fieldRoteiro" style="display:none">
+<label>Roteiro do Reels</label>
+<textarea id="modalRoteiro" placeholder="Descreva cena por cena, trilha, texto na tela…" style="min-height:160px"></textarea>
+</div>
+<div class="form-group" id="fieldSlides" style="display:none">
+<label>Conteúdo dos Slides</label>
+<textarea id="modalSlides" placeholder="Slide 1: [texto e ideia de foto]
+Slide 2: …" style="min-height:160px"></textarea>
+</div>
+<div class="form-group" id="fieldSlidesNum" style="display:none">
+<label>Nº de Slides</label>
+<input id="modalSlidesNum" placeholder="Ex: 7 slides" type="text">
+</div>
+<div class="form-group" id="fieldCaption" style="">
+<label>Legenda completa</label>
+<textarea id="modalCaption" placeholder="Texto, hashtags, telefone…"></textarea>
+</div>
+<div class="form-group">
+<div class="mgal-label">Imagens / Fotos <span class="mgal-hint">— arraste ou clique em ＋</span></div>
+<div class="modal-gallery" id="modalGallery" ondragleave="this.classList.remove('drag-over')" ondragover="event.preventDefault();this.classList.add('drag-over')" ondrop="handleDrop(event)"><button class="mgal-add" type="button"><span style="font-size:22px">＋</span><span class="lbl">foto</span></button></div>
+</div>
+<div class="form-group" id="fieldVideoLink" style="display:none">
+<label>🎬 Link do Vídeo</label>
+<input id="modalVideoLink" placeholder="https://drive.google.com/…" type="url">
+</div>
+<label class="pending-toggle">
+<input id="modalPending" type="checkbox"> ⏳ Marcar como Pendente
+      </label>
+<label class="pending-toggle" style="background:#f0fdf4;border-color:#059669;color:#065f46;">
+<input id="modalPostado" style="accent-color:#059669;" type="checkbox"> ✅ Marcar como Postado
+      </label>
+<label class="pending-toggle" style="background:#fff7ed;border-color:#f97316;color:#9a3412;">
+<input id="modalTrafego" style="accent-color:#f97316;" type="checkbox"> 💸 Sugestão de Tráfego Pago (R$1.000/mês)
+      </label>
+</div>
+<div class="modal-footer">
+<button class="btn btn-danger" onclick="deletePost()">🗑 Excluir</button>
+<button class="btn btn-ghost" onclick="closeModal()" style="color:#333;border-color:#ccc">Cancelar</button>
+<button class="btn btn-cyan" onclick="savePost()">💾 Salvar</button>
+</div>
+</div>
+</div>
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+<div class="lightbox-info">
+<div class="lb-title" id="lbTitle"></div>
+<div class="lb-date" id="lbDate"></div>
+</div>
+<div class="lightbox-img-wrap" onclick="event.stopPropagation()">
+<img alt="" id="lbImg" src="">
+<button class="lightbox-close" onclick="closeLightbox()">✕</button>
+</div>
+<div class="lightbox-nav" onclick="event.stopPropagation()">
+<button class="lightbox-nav-btn" id="lbPrev" onclick="lbStep(-1)">‹</button>
+<span class="lightbox-counter" id="lbCounter"></span>
+<button class="lightbox-nav-btn" id="lbNext" onclick="lbStep(1)">›</button>
+</div>
+</div>
+<!-- DATAS COMEMORATIVAS MODAL -->
+<div class="modal-overlay" id="datasOverlay">
+<div class="modal" style="max-width:480px;">
+<div class="modal-header">
+<h3>🗓 Datas <span>Comemorativas</span></h3>
+<button class="modal-close" onclick="closeDatasModal()">✕</button>
+</div>
+<div class="modal-body">
+<div class="form-group">
+<label>Mês</label>
+<select id="datasMonthSel" style="border:1.5px solid var(--border);border-radius:10px;padding:9px 13px;font-family:'DM Sans',sans-serif;font-size:13px;color:var(--text);outline:none;width:100%;background:#fafcff;">
+<option value="1">Janeiro</option><option value="2">Fevereiro</option>
+<option value="3">Março</option><option value="4">Abril</option>
+<option value="5">Maio</option><option value="6">Junho</option>
+<option value="7">Julho</option><option value="8">Agosto</option>
+<option value="9">Setembro</option><option value="10">Outubro</option>
+<option value="11">Novembro</option><option value="12">Dezembro</option>
+</select>
+</div>
+<p style="font-size:12px;color:var(--muted);margin-bottom:4px;">Adicione, edite ou remova datas comemorativas que aparecem como etiqueta no calendário.</p>
+<div class="data-col-labels">
+<span>Dia</span><span>Nome da data</span><span></span>
+</div>
+<div class="datas-list" id="datasList"></div>
+<button class="add-data-btn" onclick="addDataRow()">＋ Adicionar data</button>
+</div>
+<div class="modal-footer">
+<button class="btn btn-ghost" onclick="closeDatasModal()" style="color:#333;border-color:#ccc">Cancelar</button>
+<button class="btn btn-cyan" onclick="saveDatas()">💾 Salvar</button>
+</div>
+</div>
+</div>
+<div class="toast" id="toast">✅ Post salvo!</div>
+<script>
+// ─────────────────────────────────────────────
+//  DATA STRUCTURES
+// ─────────────────────────────────────────────
+
+const MONTH_NAMES = ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
+
+// Each month: { year, month(1-12), firstDow(0=Sun), days, notes, special:{day:'label'} }
+const MONTHS_CONFIG = [
+  { year:2026, month:1,  firstDow:4, days:31, notes:'', special:{1:'🎆 Ano Novo',6:'🏖️ Feriado RJ'} },
+  { year:2026, month:2,  firstDow:0, days:28, notes:'', special:{16:'🎭 Carnaval',17:'🎭 Carnaval',18:'🎭 Quarta-feira de Cinzas'} },
+  { year:2026, month:3,  firstDow:0, days:31, notes:'', special:{8:'👩 Dia da Mulher',20:'🌿 Início do Outono'} },
+  { year:2026, month:4,  firstDow:3, days:30, notes:'Zarpei Mobilidade Elétrica — 11 posts planejados', special:{1:'🤥 Dia da Mentira',2:'🧩 Consciência do Autismo',3:'✝️ Sexta-Feira Santa',5:'🐣 Páscoa',6:'🙏 São Benedito',7:'🌍 Dia Mundial da Saúde',8:'🎗️ Combate ao Câncer',13:'💋 Dia do Beijo',14:'☕ Dia Mundial do Café',21:'🇧🇷 Tiradentes',22:'🌍 Dia da Terra',23:'⚔️ São Jorge',24:'🥩 Dia Int. do Churrasco',28:'👵 Dia da Sogra',30:'🎷 Dia Int. do Jazz'} },
+  { year:2026, month:5,  firstDow:5, days:31, notes:'', special:{10:'💐 Dia das Mães',31:'🟡 Fim Maio Amarelo'} },
+  { year:2026, month:6,  firstDow:1, days:30, notes:'', special:{5:'🌍 Meio Ambiente',12:'💑 Dia dos Namorados'} },
+  { year:2026, month:7,  firstDow:3, days:31, notes:'', special:{} },
+  { year:2026, month:8,  firstDow:6, days:31, notes:'', special:{9:'👨 Dia dos Pais'} },
+  { year:2026, month:9,  firstDow:2, days:30, notes:'', special:{7:'🇧🇷 Independência',15:'🛍️ Dia do Cliente',22:'🌸 Primavera'} },
+  { year:2026, month:10, firstDow:4, days:31, notes:'', special:{2:'👶 Dia das Crianças',12:'🇧🇷 N.Sra. Aparecida',31:'🎃 Halloween'} },
+  { year:2026, month:11, firstDow:0, days:30, notes:'', special:{2:'✝️ Finados',15:'🇧🇷 Proclamação Rep.',20:'⚫ Black Friday'} },
+  { year:2026, month:12, firstDow:2, days:31, notes:'', special:{8:'🎄 Imaculada Conceição',25:'🎄 Natal',31:'🥂 Réveillon'} }
+];
+
+// Pre-filled posts per month [{ month, day, type, title, pending, trafego, perfil }]
+let POSTS = [{"month":4,"day":1,"type":"arte","title":"Se estiver vendo isso embaçado…","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Post leve e provocativo, usando efeito de imagem desfocada pra gerar curiosidade. A moto aparece nítida no centro enquanto o fundo fica embaçado — reforçando que o \"problema\" não é a visão, é a vontade.","imgObs":"Formato: Arte no feed\nEstilo: fundo propositalmente desfocado, moto Zarpei nítida no centro\nTom: provocativo, divertido, visual\nObjetivo: gerar curiosidade e desejo\n\nTexto da arte:\nSe estiver vendo isso embaçado é porque você está precisando vir na Zarpei\n\nInspiração: https://www.instagram.com/p/DVJzefOD6Et/","caption":"⚡ Se tá vendo isso embaçado… ⚡\n\nCalma.\nNão é a sua tela.\nNão é o seu óculos.\n\nÉ vontade mesmo.\n\nAquele tipo de vontade que só passa\nquando você vê uma Zarpei de perto. 😏\n\nEconomia no bolso.\nZero barulho.\nE um design que ninguém ignora.\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":3,"type":"foto","title":"Presença que chama atenção","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Post institucional focado em design e desejo. A imagem fala por si — a legenda reforça presença e estilo.","imgObs":"Formato: Foto no feed\nEstilo: foto real da moto Zarpei em ambiente urbano, valorizando acabamento e presença visual\nTom: aspiracional, limpo, direto\nObjetivo: posicionamento de marca","caption":"⚡ Tem moto que passa.\nE tem moto que faz o pescoço virar. ⚡\n\nEssa é a segunda.\n\nDesign que conversa com a rua.\nMotor que conversa com o silêncio.\n\nE um estilo que não precisa de legenda\n(mas a gente fez uma mesmo assim 😉).\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":7,"type":"carrossel","title":"Zarpei se fosse uma música","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slidesNum":"6 slides","slides":"Slide 1: Se as motos Zarpei fossem músicas…\nSlide 2: S701 1000W — Seria rock pesado. Potente e impossível de ignorar.\nSlide 3: TRIXX — Seria música eletrônica. Tecnológica e cheia de energia.\nSlide 4: A9 — Seria pop. Equilibrada, estilosa e versátil.\nSlide 5: JET — Seria acústica. Simples, prática e perfeita pro dia a dia.\nSlide 6: E aí… qual delas estaria na sua playlist?","roteiro":"","descricao":"Conteúdo criativo baseado em trend, conectando a personalidade de cada modelo com um estilo musical. Gera comentários e reforça o perfil de cada moto de forma leve.","imgObs":"Formato: Carrossel (6 slides)\nEstilo: cada slide com a moto do modelo + referência visual ao gênero musical\nTom: criativo, leve, interativo\nObjetivo: engajamento e apresentação dos modelos\n\nInspiração: https://www.instagram.com/p/DVbljgIkosu/","caption":"⚡ Se as motos Zarpei fossem músicas… ⚡\n\nA S701 seria rock. 🎸\nPotência bruta, impossível de ignorar.\n\nA TRIXX seria eletrônica. 🎧\nTecnologia pura, energia no talo.\n\nA A9 seria pop. 🎤\nEstilosa, versátil, agrada todo mundo.\n\nE a JET seria acústica. 🎶\nSimples, leve e perfeita pro cotidiano.\n\nE aí, qual entra na sua playlist?\nComenta aqui o seu modelo. 👇\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":9,"type":"reels","title":"Só queria uma linda dessa","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"Uma moça aparece na frente da moto Zarpei. Alguém se encanta achando que é por ela. Ao se aproximar, percebe que na verdade a paixão é pela moto.\n\nVirada cômica no final.\n\nInspiração: https://www.instagram.com/reels/DVEXqtckSDE/","descricao":"Reels com humor e virada no final. Uma moça aparece na frente da moto, alguém se encanta achando que é por ela — mas a paixão de verdade é pela Zarpei.","imgObs":"Formato: Reels\nEstilo: cenário urbano, tom descontraído, virada cômica no final\nTom: humor, desejo, surpresa\nObjetivo: viralizar com apelo emocional e humor","caption":"⚡ \"Só queria uma linda dessa…\" ⚡\n\nSpoiler: não era sobre ela. 😅\n\nEra sobre a moto.\n\nAcontece.\nA gente entende.\n\nDesign que vira o pescoço.\nMotor que não faz barulho.\nE uma presença que rouba a cena.\n\nDifícil mesmo é não se apaixonar. 🤷‍♂️\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":13,"type":"carrossel","title":"Como preservar a vida útil da sua Zarpei","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slidesNum":"5 slides","slides":"Slide 1: Como preservar a vida útil da sua Zarpei\nSlide 2: Respeite a carga máxima indicada — Cada modelo tem um limite de peso. Evitar sobrecarga preserva motor, suspensão e desempenho.\nSlide 3: Não deixe descarregar completamente — Recarregue antes do nível mínimo. Isso aumenta a durabilidade da bateria.\nSlide 4: Repare sempre com a Zarpei — Assistência técnica especializada garante peças corretas e segurança.\nSlide 5: Dica bônus — Faça avaliação técnica preventiva a cada 3 meses.","roteiro":"","descricao":"Conteúdo educativo e útil com dicas de conservação da moto elétrica. Reforça cuidado, assistência técnica e autoridade da marca.","imgObs":"Formato: Carrossel (5 slides)\nEstilo: clean, ícones ou ilustrações simples, fundo escuro com destaque nos textos\nTom: educativo, confiável, direto\nObjetivo: gerar valor pós-venda e reforçar assistência","caption":"⚡ Sua Zarpei merece esse cuidado ⚡\n\nNão é só ligar e sair.\n(Tá, na real é quase isso.)\n\nMas alguns hábitos simples fazem ela durar muito mais:\n\n🔋 Não deixe a bateria zerar.\n⚖️ Respeite o peso máximo do modelo.\n🔧 Manutenção? Só com a Zarpei.\n📅 A cada 3 meses, faça uma revisão preventiva.\n\nCuidou, rodou tranquilo.\nSimples assim.\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":15,"type":"foto","title":"Mobilidade elétrica em movimento","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Post visual mostrando a moto em ação na cidade. Reforça uso urbano, liberdade e praticidade.","imgObs":"Formato: Foto no feed\nEstilo: enquadramento dinâmico, moto Zarpei rodando em cenário urbano, sensação de deslocamento\nTom: leve, aspiracional, urbano\nObjetivo: posicionamento de uso no dia a dia","caption":"⚡ A rua muda quando você passa em silêncio ⚡\n\nSem escapamento.\nSem gasolina.\nSem estresse.\n\nSó você, a cidade\ne aquele trajeto que virou prazer.\n\nQuem anda de Zarpei sabe:\no caminho é o mesmo,\nmas a sensação é outra.\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":17,"type":"carrossel","title":"Disseram que um hábito leva 21 dias…","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slidesNum":"6 slides","slides":"Slide 1: Disseram que um hábito leva 21 dias para se formar…\nSlide 2: Mas o meu começou assim que liguei minha Zarpei\nSlide 3: Economia todo dia\nSlide 4: Praticidade em cada trajeto\nSlide 5: Silêncio e conforto nas ruas\nSlide 6: Talvez esteja na hora de criar esse hábito também","roteiro":"","descricao":"Post aspiracional e emocional, mostrando que a experiência com moto elétrica vira rotina desde o primeiro dia.","imgObs":"Formato: Carrossel (6 slides)\nEstilo: lifestyle, pessoa no dia a dia com a moto, cores quentes, tipografia marcante\nTom: emocional, leve, aspiracional\nObjetivo: conexão emocional e desejo","caption":"⚡ Dizem que leva 21 dias pra criar um hábito… ⚡\n\nO meu levou uma ignição.\n\nDia 1: \"vou só testar.\"\nDia 2: \"nossa, não gastei nada.\"\nDia 3: \"nunca mais volto pro combustível.\"\n\nEconomia que se sente no bolso.\nSilêncio que se sente na rua.\nLiberdade que se sente no trajeto.\n\nAlguns hábitos não precisam de 21 dias.\nPrecisam de uma Zarpei. 😏\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":21,"type":"arte","title":"Sua empresa pronta pra mobilidade elétrica?","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Post voltado para empresas e uso profissional/corporativo. Foco em economia operacional, praticidade e modernização da frota.","imgObs":"Formato: Arte no feed\nEstilo: visual mais corporativo, fundo urbano limpo, contexto de entrega/uso profissional\nTom: profissional, direto, confiável\nObjetivo: abrir canal com público B2B","caption":"⚡ Sua empresa ainda depende de combustível pra rodar? ⚡\n\nFaz a conta:\ngasolina, manutenção, troca de óleo…\n\nAgora imagina cortar tudo isso.\n\nMotos elétricas na operação significam\nmenos custo fixo,\nmais agilidade no dia a dia\ne uma frota que não para no posto.\n\nDelivery, logística, deslocamento interno —\na mobilidade elétrica já é realidade\npra quem quer operar com inteligência.\n\nQuer entender como funciona pro seu negócio?\nChama a gente. 💬\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":23,"type":"foto","title":"Liberdade em duas rodas","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Post de posicionamento com tom aspiracional e institucional. Imagem da moto em cenário aberto, transmitindo autonomia e estilo.","imgObs":"Formato: Foto no feed\nEstilo: cenário aberto ou urbano, foco em sensação de liberdade, luz natural\nTom: aspiracional, poético, institucional\nObjetivo: reforço de marca","caption":"⚡ Liberdade não é só ir e vir ⚡\n\nÉ sair de casa sem pensar no preço da gasolina.\nÉ passar por todo mundo em silêncio.\nÉ escolher o caminho mais longo\nsó porque dá vontade.\n\nDuas rodas.\nZero ruído.\nEnergia pra ir onde quiser.\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":27,"type":"foto","title":"Mobilidade elétrica também é responsabilidade","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"","descricao":"Post institucional reforçando uso consciente das motos elétricas em Angra dos Reis. Segurança e responsabilidade no trânsito.","imgObs":"Formato: Foto no feed\nEstilo: moto Zarpei em rua de Angra dos Reis, de preferência com pessoa usando capacete\nTom: sério mas acessível, institucional, educativo\nObjetivo: posicionamento de marca responsável + gancho pro Maio Amarelo","caption":"⚡ Com liberdade vem responsabilidade ⚡\n\nAs motos elétricas já fazem parte\ndas ruas de Angra dos Reis.\n\nMais silêncio.\nMais economia.\nMais gente escolhendo se mover diferente.\n\nMas mobilidade inteligente\ntambém é usar capacete,\nrespeitar o trânsito\ne cuidar de quem tá ao redor.\n\nA rua é de todo mundo.\nO futuro também. 🤝\n\n🔌 ZARPEI | Motos Elétricas"},{"month":4,"day":29,"type":"reels","title":"Dicas do guarda de trânsito / Maio Amarelo","pending":false,"trafego":false,"postado":false,"imgs":[],"videoLink":"","slides":"","slidesNum":"","roteiro":"Participação de um guarda de trânsito dando dicas rápidas sobre o uso correto da moto elétrica na cidade.\n\nA moto Zarpei aparece ao lado enquanto ele explica boas práticas de circulação.\n\nDicas: uso de capacete, atenção aos pedestres, respeito às regras de trânsito, uso responsável nas vias, manutenção em dia.\n\nServe como abertura do Maio Amarelo.\n\nInspiração: https://www.instagram.com/p/DRLGaOnEVEY/","descricao":"Reels educativo com participação real de um guarda de trânsito dando dicas sobre uso correto da moto elétrica em Angra. Serve como abertura do Maio Amarelo.","imgObs":"Formato: Reels\nEstilo: guarda de trânsito ao lado da moto Zarpei, dicas rápidas e diretas, tom de autoridade\nTom: educativo, confiável, institucional\nObjetivo: abrir o Maio Amarelo, gerar confiança e orientar novos usuários","caption":"⚡ Maio Amarelo começa agora ⚡\n\nE a gente quis começar do jeito certo:\nouvindo quem entende de trânsito de verdade.\n\nCapacete sempre.\nAtenção redobrada.\nRespeito a quem tá na rua — de carro, a pé, de bike.\n\nMoto elétrica é prática, econômica e silenciosa.\nMas nenhuma tecnologia substitui consciência.\n\nNeste Maio Amarelo,\na Zarpei tá junto pela segurança\nde quem roda em Angra. 💛\n\n🔌 ZARPEI | Motos Elétricas"}];
+
+// Ensure imgs array on every post
+POSTS = POSTS.map(p => ({...p, imgs: p.imgs||[], caption:p.caption||'', descricao:p.descricao||'', imgObs:p.imgObs||'', roteiro:p.roteiro||'', videoLink:p.videoLink||'', slides:p.slides||'', slidesNum:p.slidesNum||'', postado:p.postado||false}));
+
+// ── Planning data per month (saved separately) ──
+let PLAN_DATA = {"1":{},"2":{},"3":{},"4":{"objetivos":"Aniversário da Zarpei.","investimento":"nenhum.","trafego":"nenhum.","influenciadores":"Tawan, Murilo, Achadinhos, Enzo.","persona":"Público de Angra e Volta Redonda que já tenha interesse.","observacoes":"Ações de marketing junto aos influencers para o mês todo falando sobre a ação de brindes."},"5":{},"6":{},"7":{},"8":{},"9":{},"10":{},"11":{},"12":{}};
+
+function getPlan(m){ return PLAN_DATA[m] || (PLAN_DATA[m]={}); }
+function savePlanField(m, field, val){ getPlan(m)[field] = val; }
+
+const TYPE_ICONS={arte:'🎨',foto:'📸',story:'📱',reels:'🎬',carrossel:'🖼'};
+const TYPE_LABELS={arte:'Arte',foto:'Foto',story:'Story',reels:'Reels',carrossel:'Carrossel'};
+
+
+let currentMonthIdx=null, currentDay=null, currentPostIdx=null;
+let modalType='arte', modalImgs=[];
+let _editMode=true;
+let _lbMonthIdx=null, _lbDay=null, _lbIdx=0;
+
+const esc=s=>(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+
+function getPost(mIdx,day){return POSTS.find(p=>p.month===MONTHS_CONFIG[mIdx].month&&p.day===day);}
+function getPostIdx(mIdx,day){return POSTS.findIndex(p=>p.month===MONTHS_CONFIG[mIdx].month&&p.day===day);}
+
+// ── Stats ──
+function updateStats(){
+  const c={total:0,arte:0,foto:0,story:0,reels:0,carrossel:0,pend:0,postado:0};
+  POSTS.forEach(p=>{c.total++;if(c[p.type]!==undefined)c[p.type]++;if(p.pending)c.pend++;if(p.postado)c.postado++;});
+  ['Total','Arte','Foto','Story','Reels','Carrossel','Pend','Postado'].forEach(k=>{
+    const el=document.getElementById('stat'+k);
+    if(el)el.textContent=c[k.toLowerCase()];
+  });
+}
+
+// ── Build Month Nav ──
+function buildMonthNav(){
+  const nav=document.getElementById('monthNav');
+  MONTHS_CONFIG.forEach((mc,i)=>{
+    const btn=document.createElement('button');
+    btn.className='month-btn';
+    btn.textContent=MONTH_NAMES[mc.month-1].substring(0,3);
+    btn.onclick=()=>scrollToMonth(i);
+    btn.id='mnav'+i;
+    nav.appendChild(btn);
+  });
+}
+
+function scrollToMonth(i){
+  const el=document.getElementById('month-'+i);
+  if(el)el.scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+// ── Render All Months ──
+function renderAll(){
+  const container=document.getElementById('monthsContainer');
+  container.innerHTML='';
+  MONTHS_CONFIG.forEach((mc,mIdx)=>{
+    container.appendChild(buildMonthBlock(mc,mIdx));
+  });
+  updateStats();
+}
+
+function buildPlanPanel(mc){
+  const m = mc.month;
+  const p = getPlan(m);
+  const panel = document.createElement('div');
+  panel.className = 'plan-panel';
+
+  panel.innerHTML = `
+    <div class="plan-header-row">
+      <span class="plan-icon">📋</span>
+      <span>Planejamento do Mês</span>
+    </div>
+    <div class="plan-grid">
+      <div class="plan-cell">
+        <div class="plan-label"><span>🎯</span> Objetivos de Campanha</div>
+        <textarea class="plan-input tall" placeholder="Ex: Aumentar leads, lançar promoção, gerar awareness…" onchange="savePlanField(${m},'objetivos',this.value)">${p.objetivos||''}</textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💰</span> Investimento em Mídia</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 1.000 — Meta Ads + Google Ads…" onchange="savePlanField(${m},'investimento',this.value)">${p.investimento||''}</textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>💸</span> Tráfego Pago</div>
+        <textarea class="plan-input tall" placeholder="Ex: R$ 600 Meta Ads (feed + stories), R$ 400 Google. Públicos, segmentações…" onchange="savePlanField(${m},'trafego',this.value)">${p.trafego||''}</textarea>
+      </div>
+      <div class="plan-cell">
+        <div class="plan-label"><span>🌟</span> Influenciadores</div>
+        <textarea class="plan-input tall" placeholder="Ex: @perfil — tipo de conteúdo, formato, prazo…" onchange="savePlanField(${m},'influenciadores',this.value)">${p.influenciadores||''}</textarea>
+      </div>
+      <div class="plan-cell" style="border-right:none">
+        <div class="plan-label"><span>👤</span> Persona do Mês</div>
+        <textarea class="plan-input tall" placeholder="Ex: Público-alvo, faixa etária, dores, plataformas que usa…" onchange="savePlanField(${m},'persona',this.value)">${p.persona||''}</textarea>
+      </div>
+    </div>
+    <div class="plan-grid-bottom">
+      <div class="plan-cell-full">
+        <div class="plan-label"><span>📝</span> Observações Gerais</div>
+        <textarea class="plan-input" style="min-height:48px;resize:vertical" placeholder="Anotações livres, pendências, decisões, reuniões, contatos…" onchange="savePlanField(${m},'observacoes',this.value)">${p.observacoes||''}</textarea>
+      </div>
+    </div>
+  `;
+  return panel;
+}
+
+function buildMonthBlock(mc,mIdx){
+  const block=document.createElement('div');
+  block.className='month-block';
+  block.id='month-'+mIdx;
+
+  // Header
+  const mh=document.createElement('div');
+  mh.className='month-header';
+  mh.innerHTML=`<div class="month-title">${MONTH_NAMES[mc.month-1]} <em>${mc.year}</em></div><div class="month-badge">Mês ${mc.month}</div>`;
+  block.appendChild(mh);
+
+  // Notes
+  const mn=document.createElement('div');
+  mn.className='month-notes';
+  mn.contentEditable='true';
+  mn.setAttribute('data-month', mc.month);
+  mn.setAttribute('placeholder', 'Descreva a campanha do mês, promoções, objetivos, datas importantes…');
+  mn.innerHTML = mc.notes || '';
+  mn.addEventListener('input', ()=>{ MONTHS_CONFIG[mIdx].notes = mn.innerHTML; });
+  block.appendChild(mn);
+
+  // Planning panel
+  block.appendChild(buildPlanPanel(mc));
+  const outer=document.createElement('div');
+  outer.className='cal-grid-outer';
+  // DOW header
+  const dow=document.createElement('div');
+  dow.className='cal-dow';
+  ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb'].forEach((d,i)=>{
+    const c=document.createElement('div');
+    c.className='cal-dow-cell'+(i===0||i===6?' wknd':'');
+    c.textContent=d;
+    dow.appendChild(c);
+  });
+  outer.appendChild(dow);
+
+  // Build weeks array
+  const weeks=[];
+  let week=[];
+  // pad start
+  for(let p=0;p<mc.firstDow;p++) week.push(0);
+  for(let d=1;d<=mc.days;d++){
+    week.push(d);
+    if(week.length===7){weeks.push(week);week=[];}
+  }
+  if(week.length>0){while(week.length<7)week.push(0);weeks.push(week);}
+
+  const calWeeks=document.createElement('div');
+  calWeeks.className='cal-weeks';
+
+  weeks.forEach(wk=>{
+    const weekEl=document.createElement('div');
+    weekEl.className='cal-week';
+    wk.forEach((day,i)=>{
+      const isWknd=(i===0||i===6);
+      const cell=document.createElement('div');
+      cell.className='cal-day'+(day===0?' empty':'')+(isWknd&&day>0?' wknd-col':'');
+      if(day>0){
+        cell.dataset.day=day;
+        let html=`<div class="day-num">${day}</div>`;
+        if(mc.special&&mc.special[day]){
+          html+=`<div class="special-label">${mc.special[day]}</div>`;
+        }
+        const post=getPost(mIdx,day);
+        if(post){
+          const pc=post.pending?' pendente':post.postado?' postado':'';
+          let gallHtml='<div class="card-gallery">';
+          (post.imgs||[]).forEach((src,idx)=>{
+            gallHtml+=`<div class="card-thumb" onclick="event.stopPropagation();onThumbClick(${mIdx},${day},${idx})"><img src="${src}" alt=""><button class="rm-thumb" onclick="event.stopPropagation();removeCardThumb(${mIdx},${day},${idx})">✕</button></div>`;
+          });
+          gallHtml+=`<button class="add-thumb-btn" onclick="event.stopPropagation();triggerCardImg(${mIdx},${day})" title="Adicionar foto">＋</button></div>`;
+          const postadoBadge=post.postado?`<div class="postado-badge">✅ Postado</div>`:'';
+          const videoBadge=(post.type==='reels'&&post.videoLink)?`<a class="video-link-badge" href="${esc(post.videoLink)}" target="_blank" onclick="event.stopPropagation()">🎬 Ver</a>`:'';
+          const tpIcon=post.trafego?`<div class="tp-icon" title="Tráfego Pago">💸</div>`:'';
+          html+=`
+            <div class="post-card ${post.type}${pc}" onclick="openModal(${mIdx},${day})">
+              <div class="card-actions">
+                <button class="card-btn" onclick="event.stopPropagation();togglePostado(${mIdx},${day})" title="Toggle postado">${post.postado?'↩️':'✅'}</button>
+                <button class="card-btn" onclick="event.stopPropagation();openModal(${mIdx},${day})">✏️</button>
+                <button class="card-btn" onclick="event.stopPropagation();deletePostByKey(${mIdx},${day})">🗑</button>
+              </div>
+              <div class="post-type-tag">${TYPE_ICONS[post.type]||''} ${TYPE_LABELS[post.type]||post.type}${post.pending?' · ⏳':''}</div>
+              ${postadoBadge}${videoBadge}
+              <div class="post-title" contenteditable="${_editMode?'true':'false'}" spellcheck="false"
+                onclick="event.stopPropagation()"
+                onblur="updateTitle(${mIdx},${day},this.innerText)">${esc(post.title)}</div>
+              ${tpIcon}
+              ${gallHtml}
+            </div>`;
+        } else {
+          html+=`<button class="add-post-btn" onclick="openModal(${mIdx},${day},true)">＋ post</button>`;
+        }
+        cell.innerHTML=html;
+      } else {
+        cell.innerHTML='<div class="day-num"></div>';
+      }
+      weekEl.appendChild(cell);
+    });
+    calWeeks.appendChild(weekEl);
+  });
+
+  outer.appendChild(calWeeks);
+  block.appendChild(outer);
+  return block;
+}
+
+function updateTitle(mIdx,day,t){
+  const i=getPostIdx(mIdx,day);
+  if(i>=0)POSTS[i].title=t.trim();
+}
+
+// ── Modal ──
+function openModal(mIdx,day,isNew=false){
+  currentMonthIdx=mIdx; currentDay=day;
+  const idx=getPostIdx(mIdx,day); currentPostIdx=idx;
+  const post=idx>=0?POSTS[idx]:null;
+  const mc=MONTHS_CONFIG[mIdx];
+  document.getElementById('modalDateLabel').textContent=`${day}/${mc.month}/${mc.year}`;
+  modalType=post?post.type:'arte';
+  modalImgs=post?[...(post.imgs||[])]:[];
+  document.getElementById('modalPostTitle').value=post?.title||'';
+  document.getElementById('modalCaption').value=post?.caption||'';
+  document.getElementById('modalImgObs').value=post?.imgObs||'';
+  document.getElementById('modalRoteiro').value=post?.roteiro||'';
+  document.getElementById('modalSlides').value=post?.slides||'';
+  document.getElementById('modalSlidesNum').value=post?.slidesNum||'';
+  document.getElementById('modalVideoLink').value=post?.videoLink||'';
+  document.getElementById('modalPending').checked=post?.pending||false;
+  document.getElementById('modalPostado').checked=post?.postado||false;
+  document.getElementById('modalTrafego').checked=post?.trafego||false;
+  document.querySelectorAll('.type-opt').forEach(el=>el.classList.toggle('selected',el.dataset.type===modalType));
+  updateModalFields(modalType);
+  renderModalGallery();
+  document.getElementById('modalOverlay').classList.add('open');
+}
+function closeModal(){document.getElementById('modalOverlay').classList.remove('open');currentMonthIdx=null;currentDay=null;}
+function selectType(t){
+  modalType=t;
+  document.querySelectorAll('.type-opt').forEach(el=>el.classList.toggle('selected',el.dataset.type===t));
+  updateModalFields(t);
+}
+function updateModalFields(t){
+  const show=id=>{const el=document.getElementById(id);if(el)el.style.display='';};
+  const hide=id=>{const el=document.getElementById(id);if(el)el.style.display='none';};
+  ['fieldCaption','fieldImgObs','fieldRoteiro','fieldSlides','fieldSlidesNum','fieldVideoLink'].forEach(hide);
+  if(t==='story'){}
+  else if(t==='reels'){show('fieldVideoLink');show('fieldCaption');show('fieldRoteiro');}
+  else if(t==='carrossel'){show('fieldCaption');show('fieldSlides');show('fieldSlidesNum');}
+  else{show('fieldCaption');show('fieldImgObs');}
+}
+
+function renderModalGallery(){
+  const gal=document.getElementById('modalGallery');gal.innerHTML='';
+  modalImgs.forEach((src,i)=>{
+    const w=document.createElement('div');w.className='mgal-thumb';
+    w.innerHTML=`<img src="${src}" alt=""><button class="rm-btn" onclick="removeModalImg(${i})" type="button">✕</button>`;
+    gal.appendChild(w);
+  });
+  const btn=document.createElement('button');btn.className='mgal-add';btn.type='button';
+  btn.innerHTML='<span style="font-size:22px">＋</span><span class="lbl">foto</span>';
+  btn.onclick=()=>{
+    const inp=document.createElement('input');inp.type='file';inp.accept='image/*';inp.multiple=true;inp.style.display='none';document.body.appendChild(inp);
+    inp.onchange=e=>handleGalleryFiles(Array.from(e.target.files));inp.click();
+  };
+  gal.appendChild(btn);
+}
+function handleGalleryFiles(files){
+  if(!files.length)return;let n=0;
+  files.forEach(f=>{const r=new FileReader();r.onload=e=>{modalImgs.push(e.target.result);if(++n===files.length)renderModalGallery();};r.readAsDataURL(f);});
+}
+function handleDrop(e){e.preventDefault();document.getElementById('modalGallery').classList.remove('drag-over');handleGalleryFiles(Array.from(e.dataTransfer.files).filter(f=>f.type.startsWith('image/')));}
+function removeModalImg(i){modalImgs.splice(i,1);renderModalGallery();}
+
+function savePost(){
+  const title=document.getElementById('modalPostTitle').value.trim();
+  if(!title){alert('Por favor, adicione um título.');return;}
+  const mc=MONTHS_CONFIG[currentMonthIdx];
+  const pd={
+    month:mc.month,day:currentDay,type:modalType,title,
+    caption:document.getElementById('modalCaption').value,
+    imgObs:document.getElementById('modalImgObs').value,
+    roteiro:document.getElementById('modalRoteiro').value,
+    videoLink:document.getElementById('modalVideoLink').value.trim(),
+    slides:document.getElementById('modalSlides').value,
+    slidesNum:document.getElementById('modalSlidesNum').value,
+    pending:document.getElementById('modalPending').checked,
+    postado:document.getElementById('modalPostado').checked,
+    trafego:document.getElementById('modalTrafego').checked,
+    imgs:[...modalImgs]
+  };
+  if(currentPostIdx>=0){POSTS[currentPostIdx]=pd;}else{POSTS.push(pd);}
+  closeModal();renderAll();showToast('✅ Post salvo!');
+}
+function deletePost(){if(!confirm('Excluir este post?'))return;deletePostByKey(currentMonthIdx,currentDay);closeModal();}
+function deletePostByKey(mIdx,day){
+  const mc=MONTHS_CONFIG[mIdx];
+  const i=POSTS.findIndex(p=>p.month===mc.month&&p.day===day);
+  if(i>=0){POSTS.splice(i,1);renderAll();showToast('Post excluído.');}
+}
+function togglePostado(mIdx,day){
+  const mc=MONTHS_CONFIG[mIdx];
+  const i=POSTS.findIndex(p=>p.month===mc.month&&p.day===day);
+  if(i<0)return;
+  POSTS[i].postado=!POSTS[i].postado;
+  if(POSTS[i].postado)POSTS[i].pending=false;
+  renderAll();showToast(POSTS[i].postado?'✅ Marcado como postado!':'↩️ Desmarcado.');
+}
+
+// ── Card image upload ──
+let _cardMIdx=null,_cardDay2=null;
+const _cardIn=document.createElement('input');
+_cardIn.type='file';_cardIn.accept='image/*';_cardIn.multiple=true;_cardIn.style.display='none';
+document.body.appendChild(_cardIn);
+_cardIn.addEventListener('change',e=>{
+  const files=Array.from(e.target.files);
+  if(!files.length||_cardMIdx===null)return;
+  const mc=MONTHS_CONFIG[_cardMIdx];
+  const idx=POSTS.findIndex(p=>p.month===mc.month&&p.day===_cardDay2);
+  if(idx<0)return;
+  let n=0;
+  files.forEach(f=>{const r=new FileReader();r.onload=ev=>{POSTS[idx].imgs=POSTS[idx].imgs||[];POSTS[idx].imgs.push(ev.target.result);if(++n===files.length){renderAll();showToast(`${files.length} imagem(ns) adicionada(s)!`);}};r.readAsDataURL(f);});
+  _cardIn.value='';
+});
+function triggerCardImg(mIdx,day){_cardMIdx=mIdx;_cardDay2=day;_cardIn.click();}
+function removeCardThumb(mIdx,day,idx){
+  const mc=MONTHS_CONFIG[mIdx];
+  const i=POSTS.findIndex(p=>p.month===mc.month&&p.day===day);
+  if(i>=0){POSTS[i].imgs.splice(idx,1);renderAll();showToast('Imagem removida.');}
+}
+
+// ── Lightbox ──
+function onThumbClick(mIdx,day,idx){
+  if(_editMode){removeCardThumb(mIdx,day,idx);return;}
+  openLightbox(mIdx,day,idx);
+}
+function openLightbox(mIdx,day,idx){
+  const post=getPost(mIdx,day);
+  if(!post||!post.imgs||!post.imgs.length)return;
+  _lbMonthIdx=mIdx;_lbDay=day;_lbIdx=idx;
+  renderLightbox();
+  document.getElementById('lightbox').classList.add('open');
+  document.addEventListener('keydown',lbKeyHandler);
+}
+function renderLightbox(){
+  const post=getPost(_lbMonthIdx,_lbDay);if(!post)return;
+  const imgs=post.imgs||[];
+  document.getElementById('lbImg').src=imgs[_lbIdx]||'';
+  document.getElementById('lbTitle').textContent=post.title;
+  const mc=MONTHS_CONFIG[_lbMonthIdx];
+  document.getElementById('lbDate').textContent=`${_lbDay}/${mc.month}/${mc.year} · ${TYPE_LABELS[post.type]||post.type}`;
+  document.getElementById('lbCounter').textContent=imgs.length>1?`${_lbIdx+1} / ${imgs.length}`:'';
+  document.getElementById('lbPrev').disabled=_lbIdx===0;
+  document.getElementById('lbNext').disabled=_lbIdx===imgs.length-1;
+}
+function lbStep(dir){
+  const post=getPost(_lbMonthIdx,_lbDay);if(!post)return;
+  _lbIdx=Math.max(0,Math.min(_lbIdx+dir,(post.imgs||[]).length-1));renderLightbox();
+}
+function closeLightbox(){document.getElementById('lightbox').classList.remove('open');document.removeEventListener('keydown',lbKeyHandler);}
+function lbKeyHandler(e){if(e.key==='Escape')closeLightbox();if(e.key==='ArrowRight')lbStep(1);if(e.key==='ArrowLeft')lbStep(-1);}
+
+// ── Edit Mode ──
+function toggleEditMode(){
+  _editMode=!_editMode;
+  document.body.classList.toggle('view-mode',!_editMode);
+  document.querySelectorAll('.post-title').forEach(el=>{el.contentEditable=_editMode?'true':'false';});
+  const btn=document.getElementById('editModeBtn');
+  if(_editMode){btn.textContent='✏️ Modo Edição';btn.classList.remove('btn-cyan');btn.classList.add('btn-ghost');showToast('✏️ Modo edição ativado');}
+  else{btn.textContent='🔒 Edição Bloqueada';btn.classList.remove('btn-ghost');btn.classList.add('btn-cyan');showToast('🔒 Bloqueado · clique nas fotos para ampliar');}
+}
+
+// ── Datas Comemorativas ──
+function openDatasModal(){
+  const sel = document.getElementById('datasMonthSel');
+  sel.value = '1';
+  renderDatasList();
+  document.getElementById('datasOverlay').classList.add('open');
+}
+function closeDatasModal(){
+  document.getElementById('datasOverlay').classList.remove('open');
+}
+function renderDatasList(){
+  const mIdx = parseInt(document.getElementById('datasMonthSel').value) - 1;
+  const mc = MONTHS_CONFIG[mIdx];
+  const list = document.getElementById('datasList');
+  list.innerHTML = '';
+  Object.entries(mc.special || {}).forEach(([day, label]) => {
+    list.appendChild(makeDataRow(day, label));
+  });
+}
+function makeDataRow(day='', label=''){
+  const row = document.createElement('div');
+  row.className = 'data-row';
+  row.innerHTML = `
+    <input class="day-input" type="number" min="1" max="31" placeholder="Dia" value="${day}" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 10px;font-family:'DM Sans',sans-serif;font-size:13px;text-align:center;outline:none;width:100%;">
+    <input class="label-input" type="text" placeholder="Ex: 🌸 Dia das Mães" value="${label}" style="border:1.5px solid var(--border);border-radius:8px;padding:7px 12px;font-family:'DM Sans',sans-serif;font-size:13px;outline:none;width:100%;">
+    <button class="rm-data-btn" onclick="this.closest('.data-row').remove()" style="width:34px;height:34px;border-radius:8px;border:none;background:#fee2e2;color:#be1f1f;font-size:14px;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;">🗑</button>
+  `;
+  return row;
+}
+function addDataRow(){
+  document.getElementById('datasList').appendChild(makeDataRow());
+}
+function saveDatas(){
+  const mIdx = parseInt(document.getElementById('datasMonthSel').value) - 1;
+  const rows = document.querySelectorAll('#datasList .data-row');
+  const newSpecial = {};
+  rows.forEach(row => {
+    const day   = parseInt(row.querySelector('.day-input').value);
+    const label = row.querySelector('.label-input').value.trim();
+    if(day >= 1 && day <= 31 && label) newSpecial[day] = label;
+  });
+  MONTHS_CONFIG[mIdx].special = newSpecial;
+  closeDatasModal();
+  renderAll();
+  showToast('🗓 Datas comemorativas atualizadas!');
+}
+document.getElementById('datasMonthSel').addEventListener('change', renderDatasList);
+document.getElementById('datasOverlay').addEventListener('click', e=>{if(e.target===e.currentTarget)closeDatasModal();});
+
+// ── Export ──
+function exportHTML(){
+  const client = (document.getElementById('hdrClient')?.innerText || '').trim();
+  const year = (document.getElementById('hdrYear')?.innerText || '').trim();
+  const sub = (document.getElementById('hdrSub')?.innerText || '').trim();
+
+  let src = document.documentElement.outerHTML;
+
+  src = src.replace(/(<span contenteditable="true" id="hdrClient"[^>]*>)([\s\S]*?)(<\/span>)/, `$1${client}$3`);
+  src = src.replace(/(<em contenteditable="true" id="hdrYear"[^>]*>)([\s\S]*?)(<\/em>)/, `$1${year}$3`);
+  src = src.replace(/(<span[^>]*id="hdrSub"[^>]*>)([\s\S]*?)(<\/span>)/, `$1${sub}$3`);
+
+  const blob = new Blob([src], { type: 'text/html;charset=utf-8' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `calendario-editorial-${client.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '') || 'editavel'}-${year || '2026'}.html`;
+  document.body.appendChild(a);
+  a.click();
+  setTimeout(() => {
+    URL.revokeObjectURL(a.href);
+    a.remove();
+  }, 100);
+}
+
+function showToast(msg){
+  const t=document.getElementById('toast');t.textContent=msg;
+  t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800);
+}
+
+document.getElementById('modalOverlay').addEventListener('click',e=>{if(e.target===e.currentTarget)closeModal();});
+
+// ── Init ──
+buildMonthNav();
+renderAll();
+
+// Intersection observer to highlight active month in nav
+const observer = new IntersectionObserver((entries)=>{
+  entries.forEach(e=>{
+    if(e.isIntersecting){
+      const id=e.target.id;
+      const idx=parseInt(id.replace('month-',''));
+      document.querySelectorAll('.month-btn').forEach((b,i)=>b.classList.toggle('active',i===idx));
+    }
+  });
+},{threshold:0.15});
+document.querySelectorAll('.month-block').forEach(el=>observer.observe(el));
+</script><input type="file" accept="image/*" multiple="" style="display: none;"><input type="file" accept="image/*" multiple="" style="display: none;"><input accept="image/*" multiple="" style="display: none;" type="file">
+
+<script>
+const GITHUB_USER="DigiThree-Planejamentos";
+const REPO="calendario-zarpei";
+const FILE_PATH="index.html";
+
+function getToken(){
+ let t=localStorage.getItem("github_token");
+ if(!t){
+   t=prompt("Cole seu token do GitHub:");
+   if(t) localStorage.setItem("github_token",t);
+ }
+ return t;
+}
+
+async function salvarAlteracoes(){
+ const token=getToken();
+ if(!token) return;
+
+ const content=btoa(unescape(encodeURIComponent(document.documentElement.outerHTML)));
+
+ const api=`https://api.github.com/repos/${GITHUB_USER}/${REPO}/contents/${FILE_PATH}`;
+
+ let sha=null;
+ const res=await fetch(api,{headers:{Authorization:`token ${token}`}});
+ if(res.ok){
+   const j=await res.json();
+   sha=j.sha;
+ }
+
+ const put=await fetch(api,{
+   method:"PUT",
+   headers:{
+     Authorization:`token ${token}`,
+     "Content-Type":"application/json"
+   },
+   body:JSON.stringify({
+     message:"update via site",
+     content:content,
+     sha:sha||undefined
+   })
+ });
+
+ if(put.ok) alert("Salvo no GitHub 🚀");
+ else alert("Erro ao salvar ❌");
+}
+
+async function resetarAlteracoes(){
+ if(!confirm("Deseja restaurar versão do GitHub?")) return;
+
+ const res=await fetch(`https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/main/${FILE_PATH}?t=`+Date.now());
+ const html=await res.text();
+
+ document.open();
+ document.write(html);
+ document.close();
+}
+</script>
+
+<script>
+const GITHUB_USER = "DigiThree-Planejamentos";
+const REPO = "calendario-zarpei";
+const FILE_PATH = "index.html";
+const BRANCH = "main";
+
+function configurarToken(){
+  const token = prompt("Cole seu token do GitHub:");
+  if(token){
+    localStorage.setItem("github_token", token);
+    alert("Token salvo 🔐");
+  }
+}
+
+function getToken(){
+  let token = localStorage.getItem("github_token");
+  if(!token){
+    token = prompt("Cole seu token do GitHub:");
+    if(token) localStorage.setItem("github_token", token);
+  }
+  return token;
+}
+
+async function salvarAlteracoes(){
+  const token = getToken();
+  if(!token) return;
+
+  const html = document.documentElement.outerHTML;
+  const content = btoa(unescape(encodeURIComponent(html)));
+
+  const api = `https://api.github.com/repos/${GITHUB_USER}/${REPO}/contents/${FILE_PATH}`;
+
+  let sha = null;
+
+  const res = await fetch(api,{
+    headers:{ Authorization:`token ${token}` }
+  });
+
+  if(res.ok){
+    const data = await res.json();
+    sha = data.sha;
+  }
+
+  const put = await fetch(api,{
+    method:"PUT",
+    headers:{
+      Authorization:`token ${token}`,
+      "Content-Type":"application/json"
+    },
+    body:JSON.stringify({
+      message:"update via site",
+      content:content,
+      sha: sha || undefined,
+      branch: BRANCH
+    })
+  });
+
+  if(put.ok){
+    alert("Salvo no GitHub 🚀");
+  }else{
+    alert("Erro ao salvar ❌");
+  }
+}
+
+async function resetarAlteracoes(){
+  if(!confirm("Deseja restaurar versão do GitHub?")) return;
+
+  const res = await fetch(
+    `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/${BRANCH}/${FILE_PATH}?t=${Date.now()}`
+  );
+
+  const html = await res.text();
+
+  document.open();
+  document.write(html);
+  document.close();
+}
+<script>
+(function(){
+
+const GITHUB_USER = "DigiThree-Planejamentos";
+const REPO = "calendario-zarpei";
+const FILE_PATH = "index.html";
+const BRANCH = "main";
+
+// 🔐 TOKEN GLOBAL
+window.configurarToken = function(){
+  const token = prompt("Cole seu token do GitHub (com repo):");
+  if(token){
+    localStorage.setItem("github_token", token.trim());
+    alert("Token salvo 🔐");
+  }
+};
+
+function getToken(){
+  let token = localStorage.getItem("github_token");
+  if(!token){
+    alert("Configure o token primeiro 🔐");
+    window.configurarToken();
+    token = localStorage.getItem("github_token");
+  }
+  return token;
+}
+
+// 💾 SALVAR GLOBAL
+window.salvarAlteracoes = async function(){
+  const token = getToken();
+  if(!token) return;
+
+  const html = document.documentElement.outerHTML;
+  const content = btoa(unescape(encodeURIComponent(html)));
+
+  const api = `https://api.github.com/repos/${GITHUB_USER}/${REPO}/contents/${FILE_PATH}`;
+
+  try{
+    const res = await fetch(api,{
+      headers:{ Authorization:`token ${token}` }
+    });
+
+    if(res.status === 401){
+      alert("Token inválido ❌");
+      return;
+    }
+
+    let sha = null;
+
+    if(res.ok){
+      const data = await res.json();
+      sha = data.sha;
+    }
+
+    const put = await fetch(api,{
+      method:"PUT",
+      headers:{
+        Authorization:`token ${token}`,
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        message:"update via site",
+        content:content,
+        sha: sha || undefined,
+        branch: BRANCH
+      })
+    });
+
+    if(put.ok){
+      alert("Salvo no GitHub 🚀");
+    }else{
+      const err = await put.text();
+      console.error(err);
+      alert("Erro ao salvar ❌");
+    }
+
+  }catch(e){
+    console.error(e);
+    alert("Erro geral ❌");
+  }
+};
+
+// ↩️ RESET GLOBAL
+window.resetarAlteracoes = async function(){
+  if(!confirm("Restaurar versão do GitHub?")) return;
+
+  const res = await fetch(
+    `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/${BRANCH}/${FILE_PATH}?t=${Date.now()}`
+  );
+
+  const html = await res.text();
+
+  document.open();
+  document.write(html);
+  document.close();
+};
+
+})();
+</script>
+
+
+
+<script>
+window.addEventListener("load", () => {
+
+  const GITHUB_USER = "DigiThree-Planejamentos";
+  const REPO = "calendario-zarpei";
+  const FILE_PATH = "index.html";
+  const BRANCH = "main";
+
+  window.configurarToken = function(){
+    const token = prompt("Cole seu token do GitHub (com permissão repo):");
+    if(token){
+      localStorage.setItem("github_token", token.trim());
+      alert("Token salvo 🔐");
+    }
+  };
+
+  function getToken(){
+    let token = localStorage.getItem("github_token");
+    if(!token){
+      alert("Configure o token primeiro");
+      window.configurarToken();
+      token = localStorage.getItem("github_token");
+    }
+    return token;
+  }
+
+  window.salvarAlteracoes = async function(){
+    const token = getToken();
+    if(!token) return;
+
+    const html = document.documentElement.outerHTML;
+    const content = btoa(unescape(encodeURIComponent(html)));
+
+    const api = `https://api.github.com/repos/${GITHUB_USER}/${REPO}/contents/${FILE_PATH}`;
+
+    try{
+      const res = await fetch(api,{
+        headers:{ Authorization:`token ${token}` }
+      });
+
+      if(res.status === 401){
+        alert("Token inválido ❌");
+        return;
+      }
+
+      let sha = null;
+
+      if(res.ok){
+        const data = await res.json();
+        sha = data.sha;
+      }
+
+      const put = await fetch(api,{
+        method:"PUT",
+        headers:{
+          Authorization:`token ${token}`,
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          message:"update via site",
+          content:content,
+          sha: sha || undefined,
+          branch: BRANCH
+        })
+      });
+
+      if(put.ok){
+        alert("Salvo no GitHub 🚀");
+      } else {
+        console.error(await put.text());
+        alert("Erro ao salvar ❌");
+      }
+
+    } catch(e){
+      console.error(e);
+      alert("Erro geral ❌");
+    }
+  };
+
+  window.resetarAlteracoes = async function(){
+    if(!confirm("Restaurar versão do GitHub?")) return;
+
+    const res = await fetch(
+      `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/${BRANCH}/${FILE_PATH}?t=${Date.now()}`
+    );
+
+    const html = await res.text();
+
+    document.open();
+    document.write(html);
+    document.close();
+  };
+
+});
+</script>
+
+
+</body></html>
