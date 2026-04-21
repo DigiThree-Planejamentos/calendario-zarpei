@@ -1510,6 +1510,105 @@ async function resetarAlteracoes(){
   document.write(html);
   document.close();
 }
+<script>
+(function(){
+
+const GITHUB_USER = "DigiThree-Planejamentos";
+const REPO = "calendario-te-levo-mobile";
+const FILE_PATH = "index.html";
+const BRANCH = "main";
+
+// 🔐 TOKEN GLOBAL
+window.configurarToken = function(){
+  const token = prompt("Cole seu token do GitHub (com repo):");
+  if(token){
+    localStorage.setItem("github_token", token.trim());
+    alert("Token salvo 🔐");
+  }
+};
+
+function getToken(){
+  let token = localStorage.getItem("github_token");
+  if(!token){
+    alert("Configure o token primeiro 🔐");
+    window.configurarToken();
+    token = localStorage.getItem("github_token");
+  }
+  return token;
+}
+
+// 💾 SALVAR GLOBAL
+window.salvarAlteracoes = async function(){
+  const token = getToken();
+  if(!token) return;
+
+  const html = document.documentElement.outerHTML;
+  const content = btoa(unescape(encodeURIComponent(html)));
+
+  const api = `https://api.github.com/repos/${GITHUB_USER}/${REPO}/contents/${FILE_PATH}`;
+
+  try{
+    const res = await fetch(api,{
+      headers:{ Authorization:`token ${token}` }
+    });
+
+    if(res.status === 401){
+      alert("Token inválido ❌");
+      return;
+    }
+
+    let sha = null;
+
+    if(res.ok){
+      const data = await res.json();
+      sha = data.sha;
+    }
+
+    const put = await fetch(api,{
+      method:"PUT",
+      headers:{
+        Authorization:`token ${token}`,
+        "Content-Type":"application/json"
+      },
+      body:JSON.stringify({
+        message:"update via site",
+        content:content,
+        sha: sha || undefined,
+        branch: BRANCH
+      })
+    });
+
+    if(put.ok){
+      alert("Salvo no GitHub 🚀");
+    }else{
+      const err = await put.text();
+      console.error(err);
+      alert("Erro ao salvar ❌");
+    }
+
+  }catch(e){
+    console.error(e);
+    alert("Erro geral ❌");
+  }
+};
+
+// ↩️ RESET GLOBAL
+window.resetarAlteracoes = async function(){
+  if(!confirm("Restaurar versão do GitHub?")) return;
+
+  const res = await fetch(
+    `https://raw.githubusercontent.com/${GITHUB_USER}/${REPO}/${BRANCH}/${FILE_PATH}?t=${Date.now()}`
+  );
+
+  const html = await res.text();
+
+  document.open();
+  document.write(html);
+  document.close();
+};
+
+})();
+</script>
 </script>
 
 </body></html>
