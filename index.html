@@ -243,7 +243,7 @@
   <button class="btn btn-ghost" onclick="saveSiteData()">💾 Salvar no site</button>
   <button class="btn btn-ghost" id="editModeBtn" onclick="toggleEditMode()">✏️ Modo Edição</button>
   <button class="btn btn-ghost" onclick="openDatasModal()">🗓 Datas Comemorativas</button>
-  <div class="month-nav" id="monthNav"><button class="month-btn" id="mnav0">Jan</button><button class="month-btn" id="mnav1">Fev</button><button class="month-btn" id="mnav2">Mar</button><button class="month-btn active" id="mnav3">Abr</button><button class="month-btn" id="mnav4">Mai</button><button class="month-btn" id="mnav5">Jun</button><button class="month-btn" id="mnav6">Jul</button><button class="month-btn" id="mnav7">Ago</button><button class="month-btn" id="mnav8">Set</button><button class="month-btn" id="mnav9">Out</button><button class="month-btn" id="mnav10">Nov</button><button class="month-btn" id="mnav11">Dez</button></div>
+  <div class="month-nav" id="monthNav"></div>
 </div>
 
 <div class="stats-bar">
@@ -970,13 +970,15 @@ function updateStats(){
 
 // ── Build Month Nav ──
 function buildMonthNav(){
-  const nav=document.getElementById('monthNav');
-  MONTHS_CONFIG.forEach((mc,i)=>{
-    const btn=document.createElement('button');
-    btn.className='month-btn';
-    btn.textContent=MONTH_NAMES[mc.month-1].substring(0,3);
-    btn.onclick=()=>scrollToMonth(i);
-    btn.id='mnav'+i;
+  const nav = document.getElementById('monthNav');
+  nav.innerHTML = '';
+
+  MONTHS_CONFIG.forEach((mc, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'month-btn';
+    btn.textContent = MONTH_NAMES[mc.month - 1].substring(0, 3);
+    btn.onclick = () => scrollToMonth(i);
+    btn.id = 'mnav' + i;
     nav.appendChild(btn);
   });
 }
